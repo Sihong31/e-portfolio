@@ -6,8 +6,8 @@ import './footer.scss';
 class Footer extends Component {
   render() {
     return (
-      <Container fluid className="footer-container">
-        <footer className="footer">
+      <footer className="footer">
+        <Container className="footer-container">
           <Row>
             <Col xs={12} md={6}>
               <h5>
@@ -20,8 +20,8 @@ class Footer extends Component {
               </h5>
             </Col>
           </Row>
-        </footer>
-      </Container>
+        </Container>
+      </footer>
     )
   }
 }

@@ -16,7 +16,7 @@ class Portfolio extends Component {
       <div className="portfolio">
         <Router history={history} >
           <Header historyInfo={history} /> 
-          <Container>
+          <Container className="portfolio-container">
             <Switch>
               <Route path="/" exact component={Home} />
               <Route path="/about" exact component={About} />
