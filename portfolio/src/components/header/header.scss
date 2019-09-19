@@ -1,0 +1,29 @@
+.header {
+  .navbar {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+  a {
+    color: #000;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  .active {
+    font-weight: bold;
+  }
+  .navbar-nav {
+    align-items: center;
+  }
+  .nav-link {
+    color: #000;
+  }
+  .dropdown-menu.show {
+    display: flex;
+    flex-wrap: wrap;
+    a {
+      width: 100%;
+      padding: 8px;
+    }
+  }
+}
