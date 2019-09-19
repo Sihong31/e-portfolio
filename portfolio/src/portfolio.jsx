@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Router, Route, Switch } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
 
+import './portfolio.scss';
+
 import history from './history';
 import Header from './components/header/header';
 import Footer from './components/footer/footer';

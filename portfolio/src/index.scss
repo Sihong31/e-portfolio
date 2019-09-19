@@ -7,21 +7,9 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
- 
- @font-face {
-  font-family: 'Roboto';
-  src: local('Roboto'), url('./assets/fonts/roboto/Roboto-Regular.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Roboto-Bold';
-  src: local('Roboto-Bold'), url('./assets/fonts/roboto/Roboto-Bold.ttf') format('truetype');
-}
-
 html,
 body {
    box-sizing: border-box;
-   font-family: 'Roboto';
    line-height: 1.15; /* 1 */
    -webkit-text-size-adjust: 100%; /* 2 */
 }

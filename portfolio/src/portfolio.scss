@@ -1,0 +1,14 @@
+@import "./assets/styles/variables.scss";
+
+a {
+  color: #000;
+  &:hover {
+    color: #000;
+    text-decoration: none;
+  }
+}
+
+h4 {
+  font-weight: normal;
+  font-size: $font-size-24;
+}

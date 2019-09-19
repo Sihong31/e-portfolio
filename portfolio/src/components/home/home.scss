@@ -1,3 +1,5 @@
+@import "../../assets//styles/variables.scss";
+
 .home {
   .home-greeting {
     margin-bottom: 20px;
@@ -6,10 +8,11 @@
     margin-bottom: 50px;
   }
   .home-caption {
+    font-size: $font-size-36;
     margin-bottom: 0;
   }
   .home-caption-small {
-    p {
+    h4 {
       margin-bottom: 0;
     }
   }
