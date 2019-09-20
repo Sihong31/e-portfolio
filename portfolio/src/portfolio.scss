@@ -8,6 +8,8 @@ a {
   }
 }
 
+h1,
+h2,
 h3 {
   font-size: $font-size-lg;
 }
@@ -27,6 +29,6 @@ a {
 
 .portfolio {
   .portfolio-container {
-    margin: 100px auto 0 auto;
+    margin: 100px auto;
   }
 }

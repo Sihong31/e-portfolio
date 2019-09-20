@@ -18,5 +18,8 @@
   }
   .project-cards-container {
     margin-top: 100px;
+    .project-card:last-child {
+      margin-bottom: 0;
+    }
   }
 }

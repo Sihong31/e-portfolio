@@ -1,0 +1,27 @@
+.about {
+  .about-images {
+    padding-top: 10px;
+    .about-image {
+      margin-bottom: 2rem;
+    }
+  }
+  .about-content {
+    .about-headline {
+      margin-bottom: 2rem;
+      h2 {
+        margin-bottom: 1rem;
+      }
+    }
+    .fun {
+      margin-top: 3rem;
+      .fun-headline {
+        margin-bottom: 2rem;
+      }
+      .fun-list {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 4rem 0;
+      }
+    }
+  }
+}

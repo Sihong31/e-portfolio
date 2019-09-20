@@ -10,7 +10,7 @@ class Header extends Component {
     return (
       <div className="header">
         <Container>
-          <Navbar expand="lg">
+          <Navbar expand="md">
             <Navbar.Brand>
               <Link to="/">Emily Gong</Link>
             </Navbar.Brand>
