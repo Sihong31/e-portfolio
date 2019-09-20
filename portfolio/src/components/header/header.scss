@@ -15,9 +15,12 @@
   }
   .navbar-nav {
     align-items: center;
-  }
-  .nav-link {
-    color: #000;
+    .nav-link {
+      color: #000;
+      &:hover {
+        color: #000;
+      }
+    }
   }
   .dropdown-toggle {
     color: #000;

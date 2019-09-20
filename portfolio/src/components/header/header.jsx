@@ -17,11 +17,12 @@ class Header extends Component {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
               <Nav>
-                <NavLink to="/" activeClassName="active">Home</NavLink>
+                <NavLink to="/" exact activeClassName="active">Home</NavLink>
                 <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                  <NavLink to="/" activeClassName="active">Project1</NavLink>
-                  <NavLink to="/" activeClassName="active">Project1</NavLink>
-                  <NavLink to="/" activeClassName="active">Project1</NavLink>
+                  <NavLink to="/hermes" activeClassName="active">Hermes</NavLink>
+                  <NavLink to="/robot" activeClassName="active">Robot as Tutor</NavLink>
+                  <NavLink to="/tradewell" activeClassName="active">Tradewell Playbook</NavLink>
+                  <NavLink to="/afterlife" activeClassName="active">Afterlife</NavLink>
                 </NavDropdown>
                 <NavLink to="/about" activeClassName="active">About</NavLink>
               </Nav>
