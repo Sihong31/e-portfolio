@@ -12,7 +12,7 @@ class Header extends Component {
         <Container>
           <Navbar expand="md">
             <Navbar.Brand>
-              <Link to="/">Emily Gong</Link>
+              <Link to="/">emily gong</Link>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">

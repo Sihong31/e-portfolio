@@ -1,13 +1,19 @@
+@import "../../assets/styles/variables.scss";
+
 .header {
   .navbar {
     max-width: 1140px;
     margin: 0 auto;
     padding: 15px 0;
   }
-  a {
-    color: #000;
-    &:hover {
-      text-decoration: none;
+  .navbar-brand {
+    a {
+      font-family: $reenie-beanie;
+      color: #000;
+      font-size: $font-size-h1;
+      &:hover {
+        text-decoration: none;
+      }
     }
   }
   .active {

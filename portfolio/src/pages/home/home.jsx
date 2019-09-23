@@ -20,7 +20,7 @@ class Home extends Component {
             </div>
             <div className="home-caption-small">
               <h4>LEARN MORE <Link to="/about"><strong>ABOUT ME</strong></Link></h4>
-              <h4>OR <strong>DROP A LINE</strong></h4>
+              <h4>OR <a href="mailto:emily.f.gong@gmail.com"><strong>DROP A LINE</strong></a></h4>
             </div>
           </Col>
         </Row>

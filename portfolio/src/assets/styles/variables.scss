@@ -1,3 +1,22 @@
-$font-size-sm: 24px;
-$font-size-md: 30px;
-$font-size-lg: 36px;
+@import "./mixins.scss";
+
+// fonts
+$reenie-beanie: "Reenie-Beanie";
+$karla: "Karla";
+$spectral: "Spectral";
+
+$font-size-h1: rem(48);
+$font-size-h2: rem(30);
+$font-size-h4: rem(20);
+
+$font-size-body: rem(24);
+$font-size-link: rem(22);
+
+// colors
+$hermes-primary: #deeaff;
+$hermes-secondary: #d5dce7;
+
+$robot-primary: #c4e7e9;
+$robot-secondary: #c9dadb;
+
+$liquid-primary: #dfe3fe;

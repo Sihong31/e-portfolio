@@ -1,4 +1,18 @@
 @import "./assets/styles/variables.scss";
+@font-face {
+  font-family: "Karla";
+  src: url("./assets/fonts/karla/Karla-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Reenie-Beanie";
+  src: url("./assets/fonts/reenie-beanie/ReenieBeanie-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Spectral";
+  src: url("./assets/fonts/spectral/Spectral-Regular.ttf") format("truetype");
+}
 
 a {
   color: #000;
@@ -8,23 +22,30 @@ a {
   }
 }
 
-h1,
-h2,
-h3 {
-  font-size: $font-size-lg;
+h1 {
+  font-size: $font-size-h1;
+  font-family: $spectral;
+}
+
+h2 {
+  font-size: $font-size-h2;
+  font-family: $spectral;
 }
 
 h4 {
   font-weight: normal;
-  font-size: $font-size-sm;
+  font-size: $font-size-h4;
+  font-family: $karla;
 }
 
 p {
-  font-size: $font-size-sm;
+  font-size: $font-size-body;
+  font-family: $karla;
 }
 
 a {
-  font-size: $font-size-sm;
+  font-size: $font-size-link;
+  font-family: $karla;
 }
 
 .portfolio {
