@@ -10,7 +10,7 @@ class ProjectCard extends Component {
       <div className="project-card">
         <Row>
           <Col className="content" md={{ offset: 6 }}>
-            <h3>{ this.props.title }</h3>
+            <h1>{ this.props.title }</h1>
             <p>{ this.props.description }</p>
             <Link to={ this.props.link }>{ this.props.linkText }</Link>
           </Col>

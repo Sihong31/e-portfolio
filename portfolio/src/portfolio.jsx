@@ -12,7 +12,6 @@ import About from './pages/about/about';
 import HermesProject from './pages/hermes-project/hermes-project';
 import RobotProject from './pages/robot-project/robot-project';
 import TradewellProject from './pages/tradewell-project/tradewell-project';
-import AfterlifeProject from './pages/afterlife-project/afterlife-project';
 
 class Portfolio extends Component {
   render() {
@@ -27,7 +26,6 @@ class Portfolio extends Component {
               <Route path="/hermes" exact component= { HermesProject } />
               <Route path="/robot" exact component= { RobotProject } />
               <Route path="/tradewell" exact component= { TradewellProject } />
-              <Route path="/afterlife" exact component= { AfterlifeProject } />
             </Switch>
           </Container>
           <Footer />

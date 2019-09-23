@@ -30,22 +30,17 @@ class Home extends Component {
               title="Hermes" 
               description="a mobile application that offers indoor navigation and real-time transit conditions." 
               link="/hermes" 
-              linkText="VIEW PROJECT" />
+              linkText="View Project" />
             <ProjectCard 
               title="Robot as Tutor" 
               description="a mobile application that offers indoor navigation and real-time transit conditions." 
               link="/robot" 
-              linkText="VIEW PROJECT" />
+              linkText="View Project" />
             <ProjectCard 
               title="Tradewell Playbook" 
               description="a mobile application that offers indoor navigation and real-time transit conditions." 
               link="/tradewell" 
-              linkText="VIEW PROJECT" />
-            <ProjectCard 
-              title="Afterlife" 
-              description="a mobile application that offers indoor navigation and real-time transit conditions." 
-              link="/afterlife" 
-              linkText="VIEW PROJECT" />       
+              linkText="Coming soon" />
           </Col>
         </Row>
       </div>

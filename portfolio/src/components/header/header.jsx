@@ -22,7 +22,6 @@ class Header extends Component {
                   <NavLink to="/hermes" activeClassName="active">Hermes</NavLink>
                   <NavLink to="/robot" activeClassName="active">Robot as Tutor</NavLink>
                   <NavLink to="/tradewell" activeClassName="active">Tradewell Playbook</NavLink>
-                  <NavLink to="/afterlife" activeClassName="active">Afterlife</NavLink>
                 </NavDropdown>
                 <NavLink to="/about" activeClassName="active">About</NavLink>
               </Nav>
