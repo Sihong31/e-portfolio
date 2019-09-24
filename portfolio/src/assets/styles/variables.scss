@@ -1,5 +1,16 @@
 @import "./mixins.scss";
 
+// breakpoints
+$sm-min: 576px;
+$md-min: 768px;
+$lg-min: 992px;
+$xl-min: 1200px;
+
+$sm-max: 575.98px;
+$md-max: 767.98px;
+$lg-max: 991.98px;
+$xl-max: 1199.98px;
+
 // fonts
 $reenie-beanie: "Reenie-Beanie";
 $karla: "Karla";

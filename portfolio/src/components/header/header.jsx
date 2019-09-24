@@ -23,7 +23,7 @@ class Header extends Component {
                   <NavLink to="/robot" activeClassName="active">Robot as Tutor</NavLink>
                   <NavLink to="/tradewell" activeClassName="active">Tradewell Playbook</NavLink>
                 </NavDropdown>
-                <a href="">Resume</a>
+                <a href="https://drive.google.com/file/d/17JacAQP4abWF6ycw3gKvdamvF8gvWw6I/view" target="_blank">Resume</a>
               </Nav>
             </Navbar.Collapse>
           </Navbar>

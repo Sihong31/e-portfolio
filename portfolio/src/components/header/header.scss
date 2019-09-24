@@ -19,13 +19,24 @@
   .active {
     font-weight: bold;
   }
+  .navbar-collapse.show {
+    .navbar-nav {
+      text-align: center;
+      .nav-item,
+      a {
+        width: 100%;
+      }
+    }
+  }
   .navbar-nav {
     align-items: center;
-    a {
-      margin-right: 60px;
-      &:last-child {
-        margin-right: 0;
-      };
+    @media (min-width: $md-min) {
+      a {
+        margin-right: 60px;
+        &:last-child {
+          margin-right: 0;
+        };
+      }
     }
     .nav-link {
       color: #000;
