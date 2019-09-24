@@ -19,8 +19,8 @@ class Home extends Component {
               <h2 className="home-caption">the world.</h2>
             </div>
             <div className="home-caption-small">
-              <h4>LEARN MORE <Link to="/about"><strong>ABOUT ME</strong></Link></h4>
-              <h4>OR <a href="mailto:emily.f.gong@gmail.com"><strong>DROP A LINE</strong></a></h4>
+              <p>LEARN MORE <Link to="/about"><strong>ABOUT ME</strong></Link></p>
+              <p>OR <a href="mailto:emily.f.gong@gmail.com"><strong>DROP A LINE</strong></a></p>
             </div>
           </Col>
         </Row>
@@ -30,17 +30,20 @@ class Home extends Component {
               title="Hermes" 
               description="a mobile application that offers indoor navigation and real-time transit conditions." 
               link="/hermes" 
-              linkText="View Project" />
+              linkText="View Project"
+              backgroundColor="#DEEAFF" />
             <ProjectCard 
               title="Robot as Tutor" 
               description="a mobile application that offers indoor navigation and real-time transit conditions." 
               link="/robot" 
-              linkText="View Project" />
+              linkText="View Project"
+              backgroundColor="#C4E7E9" />
             <ProjectCard 
               title="Tradewell Playbook" 
               description="a mobile application that offers indoor navigation and real-time transit conditions." 
               link="/tradewell" 
-              linkText="Coming soon" />
+              linkText="Coming soon"
+              backgroundColor="#DFE3FE" />
           </Col>
         </Row>
       </div>

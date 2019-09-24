@@ -1,8 +1,31 @@
+@import "../../assets/styles/variables.scss";
+@import "../../assets/styles/mixins.scss";
+
 .footer {
-  background: #efefef;
-  height: 300px;
-  padding: 40px 15px;
+  background: $footer-background-color;
+  height: auto;
+  padding: rem(40) rem(15);
   position: relative;
   bottom: 0;
   width: 100%;
+  p {
+    margin: 0;
+  }
+  .footer-left-content,
+  .footer-right-content {
+    margin: rem(32) 0;
+    .footer-right-social-content {
+      margin-bottom: rem(32);
+      a {
+        font-size: $font-size-h2;
+        margin-right: rem(16);
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+    h2 {
+      margin: 0;
+    }
+  }
 }

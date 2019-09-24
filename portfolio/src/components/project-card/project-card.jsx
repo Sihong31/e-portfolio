@@ -7,7 +7,7 @@ import './project-card.scss';
 class ProjectCard extends Component {
   render() {
     return (
-      <div className="project-card">
+      <div className="project-card" style={{ backgroundColor: `${this.props.backgroundColor}` }}>
         <Row>
           <Col className="content" md={{ offset: 6 }}>
             <h1>{ this.props.title }</h1>
