@@ -1,6 +1,9 @@
+@import "../../assets/styles/variables.scss";
+
 .about {
   .about-images {
     padding-top: 10px;
+
     .about-image {
       margin-bottom: 2rem;
     }
@@ -8,12 +11,17 @@
   .about-content {
     .about-headline {
       margin-bottom: 2rem;
-      h2 {
-        margin-bottom: 1rem;
+      h1 {
+        margin: 0 0 1rem 0;
       }
     }
     .fun {
       margin-top: 3rem;
+      .fun-headline,
+      .fun-list {
+        font-family: $reenie-beanie;
+        font-size: rem(36);
+      }
       .fun-headline {
         margin-bottom: 2rem;
       }
@@ -21,7 +29,16 @@
         list-style: none;
         padding: 0;
         margin: 0 0 4rem 0;
+        .fun-list-item {
+          position: relative;
+          span {
+            margin-right: 5px;
+          }
+        }
       }
     }
+  }
+  .about-contact-link {
+    font-size: $font-size-body;
   }
 }

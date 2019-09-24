@@ -3,7 +3,6 @@ import { Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 import './project-card.scss';
-import placeholder from '../../assets/images/placeholder.svg';
 
 class ProjectCard extends Component {
   render() {
@@ -11,7 +10,7 @@ class ProjectCard extends Component {
       <div className="project-card" style={{ backgroundColor: `${this.props.backgroundColor}` }}>
         <Row>
           <Col className="project-card-image" md={6}>
-            <img src={placeholder} />
+            <img src={this.props.imageUrl} />
           </Col>
           <Col className="project-card-content" md={6}>
             <h1>{ this.props.title }</h1>

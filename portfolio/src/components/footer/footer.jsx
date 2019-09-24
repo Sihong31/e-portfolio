@@ -27,8 +27,8 @@ class Footer extends Component {
               </p>
               <div className="footer-right-content">
                 <div className="footer-right-social-content">
+                  <a href="mailto:emily.f.gong@gmail.com"><i className="fas fa-envelope-square"></i></a>
                   <a href="https://www.linkedin.com/in/emilyfgong/" target="_blank"><i className="fab fa-linkedin"></i></a>
-                  <a href="mailto:emily.f.gong@gmail.com"><i className="fas fa-envelope"></i></a>
                   <a href="https://medium.com/@emilygwrites" target="_blank"><i className="fab fa-medium"></i></a>
                 </div>
                 <h2>

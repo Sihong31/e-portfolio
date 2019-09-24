@@ -3,6 +3,9 @@ import { Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 import './home.scss';
+import thumbnailHermes from '../../assets/images/thumbnails/thumbnail-hermes.png';
+import thumbnailRobot from '../../assets/images/thumbnails/thumbnail-robot.png';
+import thumbnailTradewell from '../../assets/images/thumbnails/thumbnail-tradewell.png';
 import ProjectCard from '../../components/project-card/project-card';
 
 class Home extends Component {
@@ -31,19 +34,22 @@ class Home extends Component {
               description="a mobile application that offers indoor navigation and real-time transit conditions." 
               link="/hermes" 
               linkText="View Project"
-              backgroundColor="#DEEAFF" />
+              backgroundColor="#DEEAFF"
+              imageUrl={thumbnailHermes} />
             <ProjectCard 
               title="Robot as Tutor" 
               description="a mobile application that offers indoor navigation and real-time transit conditions." 
               link="/robot" 
               linkText="View Project"
-              backgroundColor="#C4E7E9" />
+              backgroundColor="#C4E7E9"
+              imageUrl={thumbnailRobot} />
             <ProjectCard 
               title="Tradewell Playbook" 
               description="a mobile application that offers indoor navigation and real-time transit conditions." 
               link="/tradewell" 
               linkText="Coming soon"
-              backgroundColor="#DFE3FE" />
+              backgroundColor="#DFE3FE"
+              imageUrl={thumbnailTradewell} />
           </Col>
         </Row>
       </div>
