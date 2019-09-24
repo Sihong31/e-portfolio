@@ -1,8 +1,16 @@
+@import "../../assets/styles/mixins.scss";
+
 .project-card {
-  border-radius: 12px;
-  padding: 100px;
-  margin-bottom: 100px;
-  .content {
+  border-radius: rem(12);
+  padding: rem(100);
+  margin-bottom: rem(100);
+  .project-card-image {
+    padding: rem(40);
+    img {
+      width: 100%;
+    }
+  }
+  .project-card-content {
     padding: 0;
     p {
       margin-bottom: 2rem;
