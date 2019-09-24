@@ -49,7 +49,16 @@ a {
 }
 
 .portfolio {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   .portfolio-container {
     margin: 100px auto;
+    flex-grow: 1;
+  }
+  .portfolio-container,
+  header,
+  footer {
+    flex-shrink: 0;
   }
 }

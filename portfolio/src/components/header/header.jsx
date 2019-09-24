@@ -8,7 +8,7 @@ class Header extends Component {
 
   render() {
     return (
-      <div className="header">
+      <header className="header">
         <Container>
           <Navbar expand="md">
             <Navbar.Brand>
@@ -28,7 +28,7 @@ class Header extends Component {
             </Navbar.Collapse>
           </Navbar>
         </Container>
-      </div>
+      </header>
     )
   }
 }
