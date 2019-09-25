@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 
 import './hermes-project.scss';
+import placeholder from '../../assets/images/placeholder.svg';
 import heroHermes from '../../assets/images/hermes/hero-hermes.png';
 import ProjectHero from '../../components/project-hero/project-hero';
 import ProjectOverview from '../../components/project-overview/project-overview';
+import ContentColumns from '../../components/content-columns/content-columns';
 
 class HermesProject extends Component {
   render() {
@@ -22,6 +24,19 @@ class HermesProject extends Component {
           roleDescription="UX Research, UX/UI Design"
           durationDescription="3 months"
           membersDescription="Annette Hong, June Byeon, Gabrielle Gayles, Daniela Marmolejos, Emily Gong" />
+        <Container id="hermes-features-summary">
+          <Row>
+            <Col>
+              <h4>FEATURES SUMMARY</h4>
+            </Col>
+          </Row>
+        </Container>
+        <ContentColumns 
+          textAlignment="left"
+          headline="Holistic Route Planning"
+          body1="Users can easily navigate the start-to-end to their transit iterinary with conditional information on public buses, shuttles and within-building navigation at their fingertips."
+          body2="This all-in-one approach helps new arrivals travel around and on campus with ease."
+          imageUrl={placeholder} />
       </div>
     )
   }
