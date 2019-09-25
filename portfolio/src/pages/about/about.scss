@@ -1,10 +1,11 @@
 @import "../../assets/styles/variables.scss";
 
 .about {
-  margin-top: rem(100);
+  margin: rem(100) auto;
   .about-images {
-    padding-top: 10px;
-
+    @media (min-width: $md-min) {
+      padding: rem(10) rem(40) 0 0;
+    }
     .about-image {
       margin-bottom: 2rem;
     }

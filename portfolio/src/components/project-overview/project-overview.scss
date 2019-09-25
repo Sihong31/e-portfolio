@@ -1,0 +1,30 @@
+@import "../../assets/styles/variables.scss";
+
+.project-overview {
+  margin-bottom: rem(100);
+  .project-overview-left {
+    @media (min-width: $lg-min) {
+      padding-right: rem(120);
+    }
+    h1 {
+      margin-bottom: rem(12);
+    }
+    h2 {
+      margin-bottom: rem(40);
+    }
+  }
+  .project-overview-right {
+    @media (min-width: $md-min) {
+      margin-top: rem(60);
+    }
+    .project-overview-description-group {
+      margin-bottom: rem(40);
+      h4 {
+        margin-bottom: rem(16);
+      }
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
