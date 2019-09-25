@@ -1,0 +1,27 @@
+@import '../../assets/styles/variables.scss';
+
+.project-hero {
+  margin-bottom: rem(300);
+  padding: rem(15);
+  max-height: rem(1000);
+  text-align: center;
+  .project-hero-content {
+    margin-top: rem(85);
+    .project-hero-date {
+      margin-bottom: 0;
+    }
+    .project-hero-title {
+      margin: rem(60) 0 rem(16) 0;
+    }
+    .project-hero-description {
+      padding: 0 24%;
+    }
+  }
+  .project-hero-image {
+    position: relative;
+    bottom: rem(-100);
+    img {
+      width: rem(300);
+    }
+  }
+}

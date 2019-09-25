@@ -18,8 +18,8 @@ class Portfolio extends Component {
     return (
       <div className="portfolio">
         <Router history={ history } >
-          <Header historyInfo={ history } /> 
-          <Container className="portfolio-container">
+          <Header historyInfo={ history } />
+          <div className="portfolio-container">
             <Switch>
               <Route path="/" exact component={ Home } />
               <Route path="/about" exact component= { About } />
@@ -27,7 +27,7 @@ class Portfolio extends Component {
               <Route path="/robot" exact component= { RobotProject } />
               <Route path="/tradewell" exact component= { TradewellProject } />
             </Switch>
-          </Container>
+          </div>
           <Footer />
         </Router>
       </div>

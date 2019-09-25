@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Row, Col } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 
 import './about.scss';
 import thumbnailTop from '../../assets/images/about/about-1.jpg';
@@ -9,7 +9,7 @@ import Image from '../../components/image/image';
 class About extends Component {
   render() {
     return (
-      <div className="about">
+      <Container className="about">
         <Row>
           <Col md={6} className="about-images">
             <div className="about-image">
@@ -40,7 +40,7 @@ class About extends Component {
             <a href="mailto:emily.f.gong@gmail.com" className="about-contact-link"><strong>GET IN TOUCH</strong></a>
           </Col>
         </Row>
-      </div>
+      </Container>
     )
   }
 }

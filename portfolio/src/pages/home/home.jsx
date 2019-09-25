@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Row, Col } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 import './home.scss';
@@ -11,7 +11,7 @@ import ProjectCard from '../../components/project-card/project-card';
 class Home extends Component {
   render() {
     return (
-      <div className="home">
+      <Container className="home">
         <Row>
           <Col>
             <h4 className="home-greeting">HELLO</h4>
@@ -27,8 +27,8 @@ class Home extends Component {
             </div>
           </Col>
         </Row>
-        <Row className="project-cards-container">
-          <Col>
+        <Row>
+          <Col className="project-cards-container">
             <ProjectCard 
               title="Hermes" 
               description="a mobile application that offers indoor navigation and real-time transit conditions." 
@@ -52,7 +52,7 @@ class Home extends Component {
               imageUrl={thumbnailTradewell} />
           </Col>
         </Row>
-      </div>
+      </Container>
     )
   }
 }

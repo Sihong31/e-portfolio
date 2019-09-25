@@ -1,11 +1,12 @@
 @import "../../assets//styles/variables.scss";
 
 .home {
+  margin-top: rem(100);
   .home-greeting {
-    margin-bottom: 20px;
+    margin-bottom: rem(20);
   }
   .home-caption-container {
-    margin-bottom: 50px;
+    margin-bottom: rem(50);
   }
   .home-caption {
     font-size: $font-size-h1;
@@ -17,7 +18,7 @@
     }
   }
   .project-cards-container {
-    margin-top: 100px;
+    margin: rem(100) 0;
     .project-card:last-child {
       margin-bottom: 0;
     }
