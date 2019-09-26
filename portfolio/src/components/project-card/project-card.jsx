@@ -9,10 +9,10 @@ class ProjectCard extends Component {
     return (
       <div className="project-card" style={{ backgroundColor: `${this.props.backgroundColor}` }}>
         <Row>
-          <Col className="project-card-image" md={6}>
+          <Col className="project-card-image" lg={6}>
             <img src={this.props.imageUrl} />
           </Col>
-          <Col className="project-card-content" md={6}>
+          <Col className="project-card-content" lg={6}>
             <h1>{ this.props.title }</h1>
             <p>{ this.props.description }</p>
             <Link to={ this.props.link }>{ this.props.linkText }</Link>

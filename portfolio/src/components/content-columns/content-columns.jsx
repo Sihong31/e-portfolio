@@ -8,12 +8,12 @@ class ContentColumns extends Component {
     if (this.props.textAlignment === "left") {
       return (
         <Row>
-          <Col md={8} className="text-left column-left">
+          <Col md={8} className="column-text-left column-left">
             <h2>{this.props.headline}</h2>
             <p>{this.props.body1}</p>
             <p>{this.props.body2}</p>
           </Col>
-          <Col md={4} className="text-left column-right">
+          <Col md={4} className="column-text-left column-right">
             <img src={this.props.imageUrl} alt="content" />
           </Col>
         </Row>
@@ -21,10 +21,10 @@ class ContentColumns extends Component {
     } else if (this.props.textAlignment === "right") {
       return (
         <Row>
-          <Col md={4} className="text-right column-left">
+          <Col xs={{ span: 12, order: 2 }} md={{ span: 4, order: 1 }} className="column-text-right column-left">
             <img src={this.props.imageUrl} alt="content" />
           </Col>
-          <Col md={8} className="text-right column-right">
+          <Col xs={{ span: 12, order: 1 }} md={{ span: 8, order: 2 }} className="column-text-right column-right">
             <h2>{this.props.headline}</h2>
             <p>{this.props.body1}</p>
             <p>{this.props.body2}</p>

@@ -1,0 +1,42 @@
+@import "../../assets/styles/variables.scss";
+
+.project-roadmap {
+  padding: rem(100) 0;
+  margin-bottom: rem(100);
+  .project-roadmap-headlines {
+    h1 {
+      margin: 0;
+    }
+    h4 {
+      margin-bottom: rem(20);
+    }
+  }
+  .project-roadmap-image {
+    margin: rem(60) 0;
+    @media (min-width: $md-min) {
+      margin: rem(170) 0;
+    }
+    img {
+      width: 100%;
+    }
+  }
+  .project-roadmap-content-left {
+    margin-bottom: rem(30);
+    @media (min-width: $md-min) {
+      padding-right: rem(120);
+      margin-bottom: 0;
+    }
+    h4 {
+      margin-bottom: rem(24);
+    }
+    p {
+      font-size: $font-size-body-large;
+      margin-bottom: rem(30);
+    }
+  }
+  .project-roadmap-content-right {
+    h4 {
+      margin-bottom: rem(24);
+    }
+  }
+}
