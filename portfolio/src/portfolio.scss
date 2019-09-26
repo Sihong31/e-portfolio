@@ -47,6 +47,9 @@ h4 {
 p {
   font-size: $font-size-body;
   font-family: $karla;
+  &.body-large {
+    font-size: $font-size-body-large;
+  }
 }
 
 a {

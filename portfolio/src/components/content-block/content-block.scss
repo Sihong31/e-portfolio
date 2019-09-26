@@ -1,0 +1,16 @@
+@import "../../assets/styles/variables.scss";
+
+.content-block {
+  margin-bottom: rem(100);
+  h4 {
+    margin-bottom: rem(25);
+  }
+  h1 {
+    margin-bottom: rem(25);
+  }
+  a {
+    display: block;
+    color: $project-link-color;
+    margin-top: rem(30);
+  }
+}

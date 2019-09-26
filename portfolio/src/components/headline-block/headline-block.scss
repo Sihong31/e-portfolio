@@ -1,0 +1,14 @@
+@import "../../assets/styles/variables.scss";
+
+.headline-block {
+  margin-bottom: rem(100);
+  h1 {
+    margin-bottom: rem(25);
+  }
+  h2 {
+    margin-bottom: 0;
+  }
+  h4 {
+    margin-bottom: rem(25);
+  }
+}

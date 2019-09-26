@@ -8,6 +8,9 @@ import ProjectHero from '../../components/project-hero/project-hero';
 import ProjectOverview from '../../components/project-overview/project-overview';
 import ContentColumns from '../../components/content-columns/content-columns';
 import ProjectRoadmap from '../../components/project-roadmap/project-roadmap';
+import HeadlineBlock from '../../components/headline-block/headline-block';
+import ContentBlock from '../../components/content-block/content-block';
+import SubHeadline from '../../components/sub-headline/sub-headline';
 
 class HermesProject extends Component {
   render() {
@@ -25,13 +28,7 @@ class HermesProject extends Component {
           roleDescription="UX Research, UX/UI Design"
           durationDescription="3 months"
           membersDescription="Annette Hong, June Byeon, Gabrielle Gayles, Daniela Marmolejos, Emily Gong" />
-        <Container id="hermes-features-summary">
-          <Row>
-            <Col>
-              <h4>FEATURES SUMMARY</h4>
-            </Col>
-          </Row>
-        </Container>
+        <SubHeadline text="FEATURES SUMMARY" />
         <ContentColumns 
           textAlignment="left"
           headline="Holistic Route Planning"
@@ -56,6 +53,18 @@ class HermesProject extends Component {
           leftBody1="We practiced a mixed-methods research of both quantitative and qualitative UX research."
           leftBody2="I compared log data insights with behavioral findings from actual users. From these, my team made timely design decisions to create an approachable solution."
           rightBody1="Immersion, Competitive Research, Testing , UX Audit, Data, Contextual Inquiry, Interviews, Speed Dating, Think-Alouds, Prototyping" />
+        <HeadlineBlock
+          headline="Discovery"
+          subHeadline="DOING THE RESEARCH"
+          description="In this phase, our team primarily worked through learning more about the current state of the CMU transportation landscape." />
+        <ContentBlock
+          headline="Figuring out how people use the current app"
+          subheadline="STEPS IN EXPLORATORY RESEARCH"
+          body1="We used data and evaluative think-alouds to better identify current ridership trends on the CMU shuttle and to gather key information from CMU students about when they used RideSystems, the current existing CMU transit app."
+          url="https://drive.google.com/open?id=1PjeCiVqzqfDdTRLQVHfYiAyVXfVELIgBM9PhEYxgKLc"
+          urlDescription="Check out our interview script >" />
+        <SubHeadline text="KEY FINDINGS" />
+        
       </div>
     )
   }

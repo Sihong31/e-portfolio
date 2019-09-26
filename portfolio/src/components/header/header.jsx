@@ -18,11 +18,7 @@ class Header extends Component {
             <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
               <Nav>
                 <NavLink to="/about" activeClassName="active">About</NavLink>
-                <NavDropdown title="Work" id="basic-nav-dropdown">
-                  <NavLink to="/hermes" activeClassName="active">Hermes</NavLink>
-                  <NavLink to="/robot" activeClassName="active">Robot as Tutor</NavLink>
-                  <NavLink to="/tradewell" activeClassName="active">Tradewell Playbook</NavLink>
-                </NavDropdown>
+                <NavLink to="/" exact activeClassName="active">Work</NavLink>
                 <a href="https://drive.google.com/file/d/17JacAQP4abWF6ycw3gKvdamvF8gvWw6I/view" target="_blank">Resume</a>
               </Nav>
             </Navbar.Collapse>
