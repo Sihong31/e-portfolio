@@ -1,0 +1,12 @@
+@import "../../assets/styles/variables.scss";
+
+.column-images {
+  margin-bottom: rem(100);
+  .column-images-left,
+  .column-images-right {
+    margin-bottom: rem(20);
+    img {
+      width: 100%;
+    }
+  }
+}

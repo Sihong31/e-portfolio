@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 
 import './hermes-project.scss';
+
+import affinityDiagram1 from '../../assets/images/hermes/affinity_diagram_1.png';
+import affinityDiagram2 from '../../assets/images/hermes/affinity_diagram_2.png';
 import holisticRoute from '../../assets/images/hermes/holistic_route_planning.png';
 import crowdSourcingAlert from '../../assets/images/hermes/crowdsourcing_alert.png';
 import buildingNavigation from '../../assets/images/hermes/within_building_navigation.png';
@@ -21,6 +24,8 @@ import SubHeadline from '../../components/sub-headline/sub-headline';
 import SingleAccordion from '../../components/single-accordion/single-accordion';
 import FullImage from '../../components/full-image/full-image';
 import IconTab from '../../components/icon-tab/icon-tab';
+import HangingBlock from '../../components/hanging-block/hanging-block';
+import ColumnImages from '../../components/column-images/column-images';
 
 class HermesProject extends Component {
   render() {
@@ -182,6 +187,39 @@ class HermesProject extends Component {
                 icon={iconWarning} />
             </Col>
           </Row>
+        </Container>
+        <HangingBlock
+          backgroundColor="#DEEAFF"
+          headline="RESEARCH HIGHLIGHTS"
+          body1="Our research revealed that it was mostly students that used the application far more than anyone else in the community."
+          body2="The current transit applications that supplied CMU specific transit information were lacking in answering to what students needed." />
+        <Container>
+          <Row>
+            <Col md={6}>
+              <HeadlineBlock
+                headline="Defining Needs"
+                subHeadline="FOCUSING ON USERS"
+                description="Having figured out our end user, our team concentrated next on getting a deep dive into how exactly undergraduate and graduate students navigated transportation for school." />
+            </Col>
+          </Row>
+          <SubHeadline text="STEPS IN GENERATIVE RESEARCH" />
+          <Row>
+            <Col md={6}>
+              <ContentBlock
+                headline="Digging deeper into why students commute the way they do"
+                body1="We interviewed two rounds of contextual inquiries and semi-structured interviews with undergraduate and graduate students to tease out what were high priority concerns that they considered when commuting."
+                body2="We then synthesized our collective findings through affinity diagramming."
+                url="https://drive.google.com/open?id=1Cciqg62mzFnFZZ_zNiojgqazPtV4-Sg5AeBnfBD_MR0"
+                urlDescription="Check out our affinity notes >" />
+            </Col>
+          </Row>
+          <div style={{ marginTop: '-70px' }}>
+            <ColumnImages
+              imageUrl1={affinityDiagram1}
+              imageUrl2={affinityDiagram2} />
+          </div>
+          <SubHeadline text="KEY FINDINGS" />
+          
         </Container>
       </div>
     )

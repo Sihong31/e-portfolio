@@ -1,0 +1,31 @@
+@import "../../assets/styles/variables.scss";
+
+.hanging-block {
+  margin-bottom: rem(100);
+  min-height: rem(488);
+  position: relative;
+  .hanging-block-background {
+    border-top-right-radius: rem(20);
+    border-bottom-right-radius: rem(20);
+    width: 90%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+  }
+  .container {
+    padding: rem(60) rem(60) rem(60) rem(15);
+    @media (min-width: $md-min) {
+      padding: rem(60) rem(15);
+    }
+    h4 {
+      margin-bottom: rem(32);
+    }
+    p {
+      font-size: $font-size-body-large;
+      margin-bottom: rem(40);
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
