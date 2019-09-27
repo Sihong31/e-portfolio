@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 
 import './content-columns.scss';
 
@@ -36,9 +36,9 @@ class ContentColumns extends Component {
 
   render() {
     return(
-      <Container className="content-columns">
+      <div className="content-columns">
         { this.renderColumns() }
-      </Container>
+      </div>
     )
   }
 }

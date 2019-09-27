@@ -6,7 +6,7 @@ import './project-overview.scss';
 class ProjectOverview extends Component {
   render() {
     return(
-      <Container className="project-overview">
+      <div className="project-overview">
         <Row>
           <Col className="project-overview-left" md={8}>
             <h1>Project Overview</h1>
@@ -28,7 +28,7 @@ class ProjectOverview extends Component {
             </div>
           </Col>
         </Row>
-      </Container>
+      </div>
     )
   }
 }

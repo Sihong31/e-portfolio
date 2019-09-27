@@ -1,0 +1,25 @@
+@import "../../assets/styles/variables.scss";
+
+.icon-tab {
+  font-size: $font-size-body;
+  margin-bottom: rem(15);
+  .icon-tab-headline {
+    border-radius: rem(5);
+    padding: rem(20) rem(60) rem(20) rem(15);
+    position: relative;
+    z-index: 2;
+    @media (min-width: $md-min) {
+      padding: rem(20) rem(60) rem(20) rem(15);
+    }
+    span {
+      position: absolute;
+      right: rem(20);
+      top: 50%;
+      transform: translateY(-50%);
+      img {
+        width: rem(28);
+        height: rem(32);
+      }
+    }
+  }
+}
