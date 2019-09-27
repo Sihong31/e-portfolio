@@ -26,6 +26,7 @@ import FullImage from '../../components/full-image/full-image';
 import IconTab from '../../components/icon-tab/icon-tab';
 import HangingBlock from '../../components/hanging-block/hanging-block';
 import ColumnImages from '../../components/column-images/column-images';
+import CarouselComponent from '../../components/carousel/carousel-component';
 
 class HermesProject extends Component {
   render() {
@@ -219,7 +220,7 @@ class HermesProject extends Component {
               imageUrl2={affinityDiagram2} />
           </div>
           <SubHeadline text="KEY FINDINGS" />
-          
+          <CarouselComponent />
         </Container>
       </div>
     )
