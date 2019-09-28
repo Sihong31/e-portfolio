@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
-import { Container, Row, Col, CarouselItem } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 
 import './hermes-project.scss';
 
 import affinityDiagram1 from '../../assets/images/hermes/affinity_diagram_1.png';
 import affinityDiagram2 from '../../assets/images/hermes/affinity_diagram_2.png';
+import keyFindings1 from '../../assets/images/hermes/key_findings_ideation_1.png';
+import keyFindings2 from '../../assets/images/hermes/key_findings_ideation_2.png';
+import keyFindings3 from '../../assets/images/hermes/key_findings_ideation_3.png';
+import paperPrototypeScreens from '../../assets/images/hermes/paper_prototypes_screens.png';
+import finalUserFlows from '../../assets/images/hermes/final_user_flows.png';
 import holisticRoute from '../../assets/images/hermes/holistic_route_planning.png';
 import crowdSourcingAlert from '../../assets/images/hermes/crowdsourcing_alert.png';
 import buildingNavigation from '../../assets/images/hermes/within_building_navigation.png';
@@ -27,6 +32,7 @@ import IconTab from '../../components/icon-tab/icon-tab';
 import HangingBlock from '../../components/hanging-block/hanging-block';
 import ColumnImages from '../../components/column-images/column-images';
 import CarouselComponent from '../../components/carousel/carousel-component';
+import Standout from '../../components/standout/standout';
 
 class HermesProject extends Component {
   carousel1Content = [
@@ -50,7 +56,24 @@ class HermesProject extends Component {
       headline: "I'll use a different more dangerous route if that means I can get to class faster.",
       description: "Students want to get to and from classes as fast as they can on and off campus."
     }
-  ]
+  ];
+  carousel2Content = [
+    {
+      description: "How might we help students get to class quickly? Share shortcuts with other students?",
+      leftImage: keyFindings1,
+      rightContent: "Students were enthusiastic about sharing shortcuts with other people as well as updates around weather"
+    },
+    {
+      description: "How might we help students navigate holistic route planning?",
+      leftImage: keyFindings2,
+      rightContent: "Students found a holistic route planning feature intuitive to help them with their real-time travel needs"
+    },
+    {
+      description: "How might we help students locate indoor amenities?",
+      leftImage: keyFindings3,
+      rightContent: "Students wanted routes to include within-building navigation and identify classrooms"
+    }
+  ];
 
   render() {
     return (
@@ -243,8 +266,130 @@ class HermesProject extends Component {
               imageUrl2={affinityDiagram2} />
           </div>
           <SubHeadline text="KEY FINDINGS" />
-          <CarouselComponent carouselType="quote" content={this.carousel1Content}>
-          </CarouselComponent>
+          <CarouselComponent carouselType="quote" content={this.carousel1Content} />
+          <Row>
+            <Col md={6}>
+              <ContentBlock
+                headline="Understanding how users get information on the fly through think-alouds"
+                body1="We looked into crowdsourcing as a possible solution to have current CMU students provide transit information, i.e. road conditions, traffic, bus full, to other students."
+                body2="We conducted a round of Think-Alouds on Waze, an app currently crowdsourcing related transit information around the CMU community. This was done alongside our contextual inquiries and interviews to learn how students would want related travel alerts or informational tips to appear and how they would want to use them."
+                url="https://docs.google.com/document/d/1Wgcb4wUDr330wj3dBE_3Vr4i6DjHlnN4qUhOD2JFDQg/edit?usp=sharing"
+                urlDescription="Check out the interview script >" />
+            </Col>
+          </Row>
+          <SubHeadline text="KEY FINDINGS" />
+          <Row>
+            <Col md={8}>
+            <IconTab 
+                backgroundColor="#D5DCE7"
+                headline="It is useful to filter information so that users can only see what is relevant in the current moment."
+                icon={iconBulb} />
+            </Col>
+          </Row>
+          <Row>
+            <Col md={8} className="portfolio-content-group">
+            <IconTab 
+                backgroundColor="#D5DCE7"
+                headline="Having too much information show up on a map interface  make it difficult to complete routes."
+                icon={iconWarning} />
+            </Col>
+          </Row>
+        </Container>
+        <HangingBlock
+          backgroundColor="#DEEAFF"
+          headline="RESEARCH HIGHLIGHTS"
+          body1="Having talked to our users first-hand, the strongest pain points were in getting information around campus navigation, speed, and unpredictable transport conditions."
+          body2="Apps that currently crowdsource transit information are too cluttered and difficult to use to effectively navigate the campus." />
+        <Container>
+          <Row>
+            <Col md={6}>
+              <HeadlineBlock
+                subHeadline="NARROWING THE FOCUS"
+                headline="Defining Scope"
+                description="After analyzing our data and coming up with our insights, we realized that students came to not use the CMU shuttle because it failed to provide students with accessible information around how to best plan out routes around campus-related transit and conditions." />
+            </Col>
+          </Row>
+          <SubHeadline text="PROBLEM STATEMENT" />
+          <Row>
+            <Col md={10}>
+            <Standout
+              headline="Our research showed that ---"
+              content="Graduate students want to stay on schedule with their classes and activities but current apps fail to offer them the immediate and best responsive routes to and fro and around campus."
+              color="#DEEAFF" />
+            </Col>
+          </Row>
+        </Container>
+        <HangingBlock
+          backgroundColor="#D5DCE7"
+          headline="MIDPOINT"
+          body1="We can now focus on trying to reduce the gap around information accessibility for students in our design solutions, particularly ideas around what information students need and how to present it." />
+        <Container>
+          <Row>
+            <Col md={6}>
+              <HeadlineBlock
+                subHeadline="DRILLING DOWN THE CONCEPT"
+                headline="Ideation"
+                description="Taking our research insights into account, the team began brainstorming ideas we should approach to help us narrow in more about what information and how to show the information students needed." />
+            </Col>
+          </Row>
+          <Row>
+            <Col md={6}>
+              <ContentBlock
+                subHeadline="BRAINSTORMING"
+                headline="Digging deeper into why students commute the way they do through speed dating"
+                body1="With our research to guide us, we brainstormed a number of HWE (How Might We) statements coupled with corresponding storyboards. Each storyboards was drawn to elicit user feedback on edge scenarios for their corresponding use case."
+                body2="We presented each storyboard to users through a speed dating exercise where we asked them qualitative question how accurate each storyboard was to their own experiences. The top three that received positive feedback were:" />
+            </Col>
+          </Row>
+          <SubHeadline text="KEY FINDINGS" />
+          <CarouselComponent carouselType="image" content={this.carousel2Content} />
+          <SubHeadline text="DESIGN FOCUS" />
+          <Row>
+            <Col md={10}>
+              <Standout
+                color="#DEEAFF"
+                headline="From our ideation phase, we worked out a direction --"
+                content="An all-in-one transportation application that integrates all CMU related transit information and offered input features for real-time crowdsourced updates" />
+            </Col>
+          </Row>
+        </Container>
+        <HangingBlock
+          backgroundColor="#DEEAFF"
+          headline="DESIGN HIGHLIGHTS"
+          body1="Through ideating different use case scenarios, we were able to recognize an all-around design direction that resonated most with how users want to travel." />
+        <Container>
+          <Row>
+            <Col md={6}>
+              <HeadlineBlock
+                subHeadline="EVALUATING DESIGN IDEAS"
+                headline="Iteration"
+                description="To create the final design concept around the mobile app, the team worked through multiple iterations of low-fidelity to high-fidelity prototypes. We evaluated our designs with Think-Aloud user testing so we could improve on the functionality, use, and concept of the application." />
+            </Col>
+          </Row>
+          <Row>
+            <Col md={6}>
+              <ContentBlock
+                subHeadline="REFINING THE DESIGN"
+                headline="Cultivating a responsive navigation experience through paper prototyping and think-alouds"
+                body1="We approached designing first with a paper prototype that was structured around answering how students would best record and share how they best navigate the campus with an in-app community."
+                body2="We conducted Think-Alouds with CMU students to gauge their response to this form of navigation." />
+            </Col>
+          </Row>
+          <SubHeadline text="PAPER PROTOTYPE SCREENS" />
+          <FullImage imageUrl={paperPrototypeScreens} altText="Paper prototype screens" />
+          <Row>
+            <Col md={6}>
+              <ContentBlock
+                headline="Revisiting the user flow"
+                body1="After receiving feedback that users wanted a more minimalized approach towards being able to stream shortcut routes and road conditions, we worked through a streamlined prototype with relevant information showcased as part of the displayed route." />
+            </Col>
+          </Row>
+          <SubHeadline text="FINAL USER FLOWS" />
+          <FullImage imageUrl={finalUserFlows} altText="Final user flows" />
+          <Standout
+            color="#DEEAFF"
+            content="“Including the CMU shuttle in generated routes and class locations is great. Other apps don’t do this. I’ll always know this way how to get to where I need to go.”"
+            caption="Graduate Student upon using our second iteration" />
         </Container>
       </div>
     )

@@ -1,0 +1,19 @@
+@import "../../assets/styles/variables.scss";
+
+.standout {
+  margin-bottom: rem(100);
+  p {
+    margin-bottom: rem(25);
+  }
+  .standout-content {
+    padding-left: rem(20);
+    p {
+      color: $standout-color;
+      font-size: $font-size-body-standout;
+    }
+    .standout-caption {
+      color: $standout-color;
+      font-size: rem(20);
+    }
+  }
+}

@@ -3,18 +3,40 @@
 .item {
   padding: rem(25) rem(60);
   margin-bottom: rem(50);
-  .carousel-column-left {
-    position: relative;
-    span {
-      color: $carousel-color;
-      font-size: rem(48);
-      font-family: $spectral;
-      position: absolute;
-      top: rem(-25);
-      left: rem(-17);
+  .carousel-quote-item {
+    .carousel-column-left {
+      position: relative;
+      span {
+        color: $carousel-color;
+        font-size: rem(48);
+        font-family: $spectral;
+        position: absolute;
+        top: rem(-25);
+        left: rem(-17);
+      }
     }
-    h2 {
-
+  }
+  .carousel-image-item {
+    .description {
+      font-size: rem(20);
+      margin-bottom: rem(45);
+    }
+    .carousel-image-item-content-row {
+      align-items: center;
+      .carousel-column-left {
+        @media (min-width: $md-min) {
+          padding-right: rem(40);
+        }
+        img {
+          width: 100%;
+        }
+      }
+      .carousel-column-right {
+        p {
+          font-size: rem(36);
+          font-family: $spectral;
+        }
+      }
     }
   }
 }

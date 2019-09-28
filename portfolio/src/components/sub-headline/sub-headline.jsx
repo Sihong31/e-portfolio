@@ -5,7 +5,7 @@ import './sub-headline.scss';
 class SubHeadline extends Component {
   render() {
     return (
-      <h4>{this.props.text}</h4>
+      <h4 className="subheadline-component">{this.props.text}</h4>
     )
   }
 }

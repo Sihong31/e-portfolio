@@ -16,6 +16,7 @@ class CarouselComponent extends Component {
           return (
             <div key={i}>
               <CarouselItem
+                    type="quote"
                     headline={slide.headline}
                     description={slide.description} />
             </div>
@@ -24,7 +25,17 @@ class CarouselComponent extends Component {
       );
     } else if (this.props.carouselType === "image") {
       return (
-        <div></div>
+        slides.map((slide, i) => {
+          return (
+            <div key={i}>
+              <CarouselItem
+                type="image"
+                description={slide.description}
+                leftImage={slide.leftImage}
+                rightContent={slide.rightContent} />
+            </div>
+          )
+        })
       );
     }
     return (

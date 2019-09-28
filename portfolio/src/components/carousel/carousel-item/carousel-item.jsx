@@ -5,30 +5,50 @@ import './carousel-item.scss';
 
 class CarouselItem extends Component {
 
-  renderImageContent = () => {
+
+  renderContent = () => {
+    if (this.props.type === "quote") {
+      return (
+        <div className="carousel-quote-item">
+          <Row>
+            <Col xs={6} className="carousel-column-left">
+              <span>“</span>
+              <h2>{this.props.headline}</h2>
+            </Col>
+            <Col xs={6} className="carousel-column-right">
+              <p>{this.props.description}</p>
+            </Col>
+          </Row>
+        </div>
+      );
+    } else if (this.props.type === "image") {
+      return (
+        <div className="carousel-image-item">
+          <Row>
+            <Col>
+              <p className="description">{this.props.description}</p>
+            </Col>
+          </Row>
+          <Row className="carousel-image-item-content-row">
+            <Col xs={6} className="carousel-column-left">
+              <img src={this.props.leftImage} alt="Left side imagery" />
+            </Col>
+            <Col xs={6} className="carousel-column-right">
+              <p>{this.props.rightContent}</p>
+            </Col>
+          </Row>
+        </div>
+      );
+    }
     return (
       <div></div>
-    );
-  }
-
-  renderQuoteContent = (headline, body) => {
-    return (
-      <Row>
-        <Col xs={6} className="carousel-column-left">
-          <span>“</span>
-          <h2>{headline}</h2>
-        </Col>
-        <Col xs={6} className="carousel-column-right">
-          <p>{body}</p>
-        </Col>
-      </Row>
     );
   }
 
   render() {
     return (
       <div className="item">
-        { this.renderQuoteContent(this.props.headline, this.props.description ) }
+        { this.renderContent() }
       </div>
     );
   }
