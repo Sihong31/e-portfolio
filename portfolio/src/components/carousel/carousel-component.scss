@@ -2,5 +2,26 @@
 
 .carousel-component {
   background: $carousel-background;
-  padding: rem(80) rem(60);
+  border-radius: rem(20);
+  margin-bottom: rem(100);
+  padding: rem(60) rem(40);
+  .slick-arrow {
+    &:before {
+      color: $carousel-color;
+      font-size: rem(25);
+    }
+  }
+  .slick-dots li button {
+    &:before {
+      font-size: rem(16);
+      opacity: 1;
+      color: #E0DFDF;
+    }
+  }
+  .slick-dots li.slick-active button {
+    &:before {
+      opacity: 1;
+      color: $carousel-color;
+    }
+  }
 }

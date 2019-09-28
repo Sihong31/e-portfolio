@@ -1,0 +1,20 @@
+@import "../../../assets/styles/variables.scss";
+
+.item {
+  padding: rem(25) rem(60);
+  margin-bottom: rem(50);
+  .carousel-column-left {
+    position: relative;
+    span {
+      color: $carousel-color;
+      font-size: rem(48);
+      font-family: $spectral;
+      position: absolute;
+      top: rem(-25);
+      left: rem(-17);
+    }
+    h2 {
+
+    }
+  }
+}

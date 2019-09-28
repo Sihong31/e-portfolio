@@ -5,8 +5,32 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import './carousel-component.scss';
+import CarouselItem from './carousel-item/carousel-item';
 
 class CarouselComponent extends Component {
+
+  renderContent = (slides) => {
+    if (this.props.carouselType === "quote") {
+      return (
+        slides.map((slide, i) => {
+          return (
+            <div key={i}>
+              <CarouselItem
+                    headline={slide.headline}
+                    description={slide.description} />
+            </div>
+          );
+        })
+      );
+    } else if (this.props.carouselType === "image") {
+      return (
+        <div></div>
+      );
+    }
+    return (
+      <div></div>
+    );
+  }
 
   render() {
     const settings = {
@@ -19,15 +43,7 @@ class CarouselComponent extends Component {
     return (
       <div className="carousel-component">
         <Slider {...settings}>
-          <div>
-            <h3>1</h3>
-          </div>
-          <div>
-            <h3>2</h3>
-          </div>
-          <div>
-            <h3>3</h3>
-          </div>
+          {this.renderContent(this.props.content)}
         </Slider>
       </div>
     );

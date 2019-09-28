@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, CarouselItem } from 'react-bootstrap';
 
 import './hermes-project.scss';
 
@@ -29,6 +29,29 @@ import ColumnImages from '../../components/column-images/column-images';
 import CarouselComponent from '../../components/carousel/carousel-component';
 
 class HermesProject extends Component {
+  carousel1Content = [
+    {
+      headline: "I just learn through experience how to travel to and around campus",
+      description: "Students do not rely on any of the existing transit apps to navigate classroom locations and buildings on campus because none of the existing apps provide that information"
+    },
+    {
+      headline: "I never really know if a bus is going to pass me or let me on...I can never tell if it's full.",
+      description: "Students have no identifying resource that helps them relate what exactly is affecting their commute, i.e. construction, buses full, or traffic."
+    },
+    {
+      headline: "It wasn't until my junior year that I learned all the shortcuts on campus.",
+      description: "Students generally learn about on-campus shortcuts through word-of-mouth from classmates/friends gradually over the time they are here."
+    },
+    {
+      headline: "I would definitely share shortcuts with other students. We are all suffering together!",
+      description: "Students generally wanted to pass on the knowledge they learned from others about campus shortcuts and other tips to newcomers."
+    },
+    {
+      headline: "I'll use a different more dangerous route if that means I can get to class faster.",
+      description: "Students want to get to and from classes as fast as they can on and off campus."
+    }
+  ]
+
   render() {
     return (
       <div className="hermes">
@@ -220,7 +243,8 @@ class HermesProject extends Component {
               imageUrl2={affinityDiagram2} />
           </div>
           <SubHeadline text="KEY FINDINGS" />
-          <CarouselComponent />
+          <CarouselComponent carouselType="quote" content={this.carousel1Content}>
+          </CarouselComponent>
         </Container>
       </div>
     )

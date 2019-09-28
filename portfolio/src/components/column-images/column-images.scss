@@ -6,7 +6,13 @@
   .column-images-right {
     margin-bottom: rem(20);
     img {
+      height: 100%;
       width: 100%;
+    }
+  }
+  @media (min-width: $md-min) {
+    .column-images-right {
+      padding-left: 0;
     }
   }
 }
