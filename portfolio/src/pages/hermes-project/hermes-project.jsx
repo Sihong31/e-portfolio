@@ -3,6 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 import './hermes-project.scss';
 
+import finalDesign from '../../assets/images/hermes/final_design.png';
 import affinityDiagram1 from '../../assets/images/hermes/affinity_diagram_1.png';
 import affinityDiagram2 from '../../assets/images/hermes/affinity_diagram_2.png';
 import keyFindings1 from '../../assets/images/hermes/key_findings_ideation_1.png';
@@ -33,6 +34,7 @@ import HangingBlock from '../../components/hanging-block/hanging-block';
 import ColumnImages from '../../components/column-images/column-images';
 import CarouselComponent from '../../components/carousel/carousel-component';
 import Standout from '../../components/standout/standout';
+import FinalDesign from '../../components/final-design/final-design';
 
 class HermesProject extends Component {
   carousel1Content = [
@@ -391,6 +393,21 @@ class HermesProject extends Component {
             content="“Including the CMU shuttle in generated routes and class locations is great. Other apps don’t do this. I’ll always know this way how to get to where I need to go.”"
             caption="Graduate Student upon using our second iteration" />
         </Container>
+        <FinalDesign
+          backgroundColor="#D5DCE7"
+          fd1Subheadline="OUTCOME"
+          fd1Headline="Final Design"
+          fd1Body1="A holistic navigation experience catering the campus experience to students in real-time and in focus"
+          fd1Url="https://invis.io/UYPGWACGHRF"
+          fd1UrlDescription="Check out our prototype >"
+          imageUrl={finalDesign}
+          fd2Subheadline="POST-MORTEM"
+          fd2Headline="Reflections on This Project"
+          fd2Title1="It’s important to move ahead with out of the box ideas."
+          fd2Body1="Crowdsourcing was originally an entire new approach for us to create travel alerts but it became a cornerstone technology to our final design."
+          fd2Title2="Research is crucial to better design."
+          fd2Body2="Much of our design was more in seam with how students actually approach commuting to and fro school, something that we could not have done without doing our user research." />
+      <div style={{ marginTop: '100px'}}></div>
       </div>
     )
   }

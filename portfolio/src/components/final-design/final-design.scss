@@ -1,0 +1,56 @@
+@import "../../assets/styles/variables.scss";
+
+.final-design {
+  position: relative;
+  .final-design-icon {
+    background-color: #ffffff;
+    border-radius: 100%;
+    position: absolute;
+    bottom: rem(-27.5);
+    width: rem(55);
+    height: rem(55);
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    img {
+      margin: rem(3) 0 0 0;
+      width: 90%;
+    }
+  }
+  padding: rem(80) 0 rem(300) 0;
+  img {
+    margin: rem(70) 0 rem(150) 0;
+    width: 100%;
+  }
+  .final-design-content-1 {
+    h4 {
+      margin-bottom: rem(30);
+    }
+    h1 {
+      margin-bottom: rem(20);
+    }
+    p {
+      font-size: $font-size-body-large;
+      font-family: $spectral;
+    }
+    a {
+      color: #000;
+      font-size: rem(24);
+    }
+  }
+  .final-design-content-2 {
+    h4 {
+    }
+    h1 {
+      margin-bottom: rem(60);
+    }
+    h3 {
+      font-size: $font-size-body-large;
+      font-family: $spectral;
+      margin-bottom: rem(15);
+    }
+    p {
+      margin-bottom: rem(55);
+    }
+  }
+}
