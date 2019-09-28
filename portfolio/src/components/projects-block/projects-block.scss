@@ -1,0 +1,64 @@
+@import "../../assets/styles/variables.scss";
+
+.projects-block {
+  margin: rem(57.5) 0 rem(100) 0;
+  padding: 0 rem(15);
+  @media (min-width: $xl-min) {
+    padding: 0 rem(50);
+  }
+  h1 {
+    font-family: $reenie-beanie;
+    text-align: center;
+    margin-bottom: rem(40);
+  }
+  img {
+    width: 100%;
+    @media (max-width: $lg-max) {
+      max-width: rem(250);
+      margin-bottom: rem(30);
+    }
+    @media (min-width: $lg-min) {
+      height: rem(150);
+      width: rem(150);
+      object-fit: contain;
+      object-position: 50% 39%;
+    }
+    @media (min-width: $xl-min) {
+      height: rem(250);
+      width: rem(250);
+    }
+  }
+  .project-1,
+  .project-2 {
+    display: block;
+    border-radius: rem(20);
+    padding: rem(30) rem(15);
+    margin-bottom: rem(20);
+    @media (min-width: $lg-min) {
+      margin-bottom: 0;
+      padding: rem(60) rem(30);
+    }
+    .row {
+      align-items: center;
+    }
+    h1 {
+      margin-bottom: 0;
+      font-family: $spectral;
+      font-size: rem(24);
+      @media (min-width: $lg-min) {
+        font-size: rem(40);
+      }
+    }
+    .project-image {
+      text-align: center;
+    }
+    .project-headline {
+      h1 {
+        text-align: center;
+        @media (min-width: $lg-min) { 
+          text-align: center;
+        }
+      }
+    }
+  }
+}

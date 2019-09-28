@@ -3,6 +3,8 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 import './hermes-project.scss';
 
+import thumbnailRobot from '../../assets/images/thumbnails/thumbnail-robot.png';
+import thumbnailTradewell from '../../assets/images/thumbnails/thumbnail-tradewell.png';
 import finalDesign from '../../assets/images/hermes/final_design.png';
 import affinityDiagram1 from '../../assets/images/hermes/affinity_diagram_1.png';
 import affinityDiagram2 from '../../assets/images/hermes/affinity_diagram_2.png';
@@ -35,6 +37,7 @@ import ColumnImages from '../../components/column-images/column-images';
 import CarouselComponent from '../../components/carousel/carousel-component';
 import Standout from '../../components/standout/standout';
 import FinalDesign from '../../components/final-design/final-design';
+import ProjectsBlock from '../../components/projects-block/projects-block';
 
 class HermesProject extends Component {
   carousel1Content = [
@@ -407,7 +410,13 @@ class HermesProject extends Component {
           fd2Body1="Crowdsourcing was originally an entire new approach for us to create travel alerts but it became a cornerstone technology to our final design."
           fd2Title2="Research is crucial to better design."
           fd2Body2="Much of our design was more in seam with how students actually approach commuting to and fro school, something that we could not have done without doing our user research." />
-      <div style={{ marginTop: '100px'}}></div>
+          <ProjectsBlock
+            backgroundColor1="#c4e7e9"
+            imageUrl1={thumbnailRobot}
+            headline1="Robot as Tutor"
+            backgroundColor2="#dfe3fe"
+            imageUrl2={thumbnailTradewell}
+            headline2="TradeWell Playbook" />
       </div>
     )
   }
