@@ -4,6 +4,8 @@ import { Container, Row, Col } from 'react-bootstrap';
 import './robot-project.scss';
 import thumbnailHermes from '../../assets/images/thumbnails/thumbnail-hermes.png';
 import thumbnailTradewell from '../../assets/images/thumbnails/thumbnail-tradewell.png';
+import affinityGraph from '../../assets/images/robot/affinity_graph.png';
+import manipulationGraph from '../../assets/images/robot/manipulation_check_graph.png';
 import trustGraph from '../../assets/images/robot/trust_graph.png';
 import robotFeedback from '../../assets/images/robot/computer_robot_feedback.png';
 import stepByStep from '../../assets/images/robot/step_by_step.png';
@@ -26,6 +28,7 @@ import HeadlineBlock from '../../components/headline-block/headline-block';
 import HangingBlock from '../../components/hanging-block/hanging-block';
 import FinalDesign from '../../components/final-design/final-design';
 import SingleAccordion from '../../components/single-accordion/single-accordion';
+import CarouselComponent from '../../components/carousel/carousel-component';
 
 
 class RobotProject extends Component {
@@ -82,6 +85,23 @@ class RobotProject extends Component {
       boldedCopyStart: "The mean affinity towards the robot is lower for participants subject to conflicting feedback treatment",
       body: "The mean affinity towards the robot is lower for participants subject to conflicting feedback treatment when compared to participants subject to non-conflicting feedback treatment."
     },
+  ];
+  carousel1Content = [
+    {
+      description: "What happened to the affinity among participants in the user study?",
+      leftImage: affinityGraph,
+      rightContent: "The mean score of affinity scores are very high among all study designs."
+    },
+    {
+      description: "What happened to the trust among participants in the user study?",
+      leftImage: trustGraph,
+      rightContent: "The mean trust in conflicting feedback treatments are lower than non-conflicting treatment."
+    },
+    {
+      description: "Did our selection on robot reactions validate the results of our study?",
+      leftImage: manipulationGraph,
+      rightContent: "Our choice of robot reactions is valid given the p-value (0.000002) check of significance."
+    }
   ];
 
   render() {
@@ -233,7 +253,7 @@ class RobotProject extends Component {
             </Col>
           </Row>
           <SubHeadline text="KEY FINDINGS" />
-          <FullImage imageUrl={trustGraph} altText="Trust Graph" />
+          <CarouselComponent carouselType="image" content={this.carousel1Content} />
           <Row>
             <Col md={6}>
               <ContentBlock
