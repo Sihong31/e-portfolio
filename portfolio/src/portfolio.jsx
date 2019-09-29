@@ -26,6 +26,7 @@ class Portfolio extends Component {
               <Route path="/hermes" exact component= { HermesProject } />
               <Route path="/robot" exact component= { RobotProject } />
               <Route path="/tradewell" exact component= { TradewellProject } />
+              <Route component={ Home } />
             </Switch>
           </div>
           <Footer />
