@@ -10,6 +10,7 @@ class ContentBlock extends Component {
           <h2>{this.props.headline}</h2>
           <p>{this.props.body1}</p>
           <p>{this.props.body2}</p>
+          <p>{this.props.body3}</p>
           <a href={this.props.url} target="_blank">{this.props.urlDescription}</a>
       </div>
     )

@@ -19,7 +19,7 @@ class FinalDesign extends Component {
                 <p>{this.props.fd1Body1}</p>
                 <a href={this.props.fd1Url} target="_blank">{this.props.fd1UrlDescription}</a>
               </div>
-              <FullImage imageUrl={this.props.imageUrl} altText="Final Outcome" />
+              {this.props.imageUrl ? <FullImage imageUrl={this.props.imageUrl} altText="Final Outcome" /> : ''}
               <div className="final-design-content-2">
                 <h4>{this.props.fd2Subheadline}</h4>
                 <h1>{this.props.fd2Headline}</h1>

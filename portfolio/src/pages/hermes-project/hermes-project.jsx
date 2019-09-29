@@ -118,7 +118,7 @@ class HermesProject extends Component {
           <Row>
             <Col md={6}>
               <ContentBlock 
-                subHeadline="OUR CHALLENGE "
+                subHeadline="OUR CHALLENGE"
                 headline="Graduate students want to stay on schedule with their classes and activities."
                 body1="But their commutes rely on bus shuttles with unreliable timings. Routes are always changing with construction and traffic." />
             </Col>
@@ -137,18 +137,24 @@ class HermesProject extends Component {
           </Row>
           <ContentColumns 
             textAlignment="left"
+            colSizeLeft="8"
+            colSizeRight="4"
             headline="Holistic Route Planning"
             body1="Users can easily navigate the start-to-end to their transit iterinary with conditional information on public buses, shuttles and within-building navigation at their fingertips."
             body2="This all-in-one approach helps new arrivals travel around and on campus with ease."
             imageUrl={holisticRoute} />
           <ContentColumns
             textAlignment="right"
+            colSizeLeft="8"
+            colSizeRight="4"
             headline="Within-building navigation"
             body1="Having classrooms as part of the holistic route planning experience helps students pinpoint a more exact route and get there more quickly."
             body2="Providing indoor shortcuts would be the next step in leveraging indoor mapping technology."
             imageUrl={buildingNavigation} />
           <ContentColumns 
             textAlignment="left"
+            colSizeLeft="8"
+            colSizeRight="4"
             headline="Crowdsourcing Alerts"
             body1="Users will be able to easily provide direct input on travel conditions while on route to their destination."
             body2="The collected information will be used to help users be alert ahead on bus statuses, unsafe areas, and/or construction."
@@ -451,9 +457,11 @@ class HermesProject extends Component {
           <ProjectsBlock
             backgroundColor1="#c4e7e9"
             imageUrl1={thumbnailRobot}
+            projectUrl1="/robot"
             headline1="Robot as Tutor"
             backgroundColor2="#dfe3fe"
             imageUrl2={thumbnailTradewell}
+            projectUrl2="/tradewell"
             headline2="TradeWell Playbook" />
       </div>
     )
