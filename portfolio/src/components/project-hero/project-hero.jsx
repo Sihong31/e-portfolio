@@ -4,6 +4,15 @@ import './project-hero.scss';
 
 class ProjectHero extends Component {
   render() {
+    let imageClass = '';
+    if (this.props.projectType === 'hermes') {
+      imageClass = 'hermes';
+    } else if (this.props.projectType === 'robot') {
+      imageClass = 'robot';
+    } else if (this.props.projectType === 'tradewell') {
+      imageClass = 'tradewell';
+    }
+
     return(
       <div className="project-hero" style={{ backgroundColor: `${this.props.backgroundColor}` }}>
         <div className="project-hero-content">
@@ -12,7 +21,7 @@ class ProjectHero extends Component {
           <p className="project-hero-description">{this.props.description}</p>
         </div>
         <div className="project-hero-image">
-          <img src={this.props.imageUrl} alt="Hermes"></img>
+          <img className={imageClass} src={this.props.imageUrl} alt="Hermes"></img>
         </div>
       </div>
     )

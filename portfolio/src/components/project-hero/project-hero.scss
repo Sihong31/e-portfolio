@@ -19,9 +19,20 @@
   }
   .project-hero-image {
     position: relative;
-    bottom: rem(-100);
+    bottom: rem(-80);
     img {
-      width: rem(300);
+      width: 50%;
+      margin: 0 auto;
+      min-width: rem(250);
+      &.hermes {
+        max-width: rem(300);
+      }
+      &.robot {
+        max-width: rem(600);
+      }
+      &.tradwell {
+
+      }
     }
   }
 }

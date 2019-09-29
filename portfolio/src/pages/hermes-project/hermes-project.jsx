@@ -87,7 +87,8 @@ class HermesProject extends Component {
           backgroundColor="#DEEAFF"
           date="SEPTEMBER - DECEMBER  2018"
           title="Hermes"
-          description="a mobile application that offers indoor navigation and real-time transit conditions."
+          description="a mobile application that offers indoor navigation and real-time transit conditions"
+          projectType="hermes"
           imageUrl={heroHermes} />
         <Container>
           <ProjectOverview 

@@ -2,7 +2,10 @@ import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 
 import './robot-project.scss';
+import heroRobot from '../../assets/images/robot/hero_robot.png';
 import ListBlock from '../../components/list-block/list-block';
+import ProjectsBlock from '../../components/projects-block/projects-block';
+import ProjectHero from '../../components/project-hero/project-hero';
 
 
 class RobotProject extends Component {
@@ -37,6 +40,13 @@ class RobotProject extends Component {
   render() {
     return (
       <div className="robot-project">
+        <ProjectHero 
+          backgroundColor="#c4e7e9"
+          date="SEPTEMBER - DECEMBER  2018"
+          title="Robot as Tutor"
+          description="a study around the role of robots as educators in one-to-one tutoring spaces"
+          projectType="robot"
+          imageUrl={heroRobot} />
         <Container>
           <Row>
             <Col>
