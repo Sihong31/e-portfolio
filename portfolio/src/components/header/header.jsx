@@ -5,8 +5,20 @@ import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
 import './header.scss';
 
 class Header extends Component {
+  state = { isOpen: false, firstRun: true }
+
+  handleClick = () => {
+    this.setState({ isOpen: !this.state.isOpen, firstRun: false });
+  }
 
   render() {
+    let menuClass = '';
+    if (this.state.isOpen) {
+      menuClass = 'activated-menu';
+    } else if (!this.state.isOpen && !this.state.firstRun) {
+      menuClass = 'deactivated-menu';
+    }
+
     return (
       <header className="header">
         <Container>
@@ -14,8 +26,12 @@ class Header extends Component {
             <Navbar.Brand>
               <Link to="/">emily gong</Link>
             </Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
+            <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={this.handleClick}>
+              <span className={menuClass}></span>
+              <span className={menuClass}></span>
+              <span className={menuClass}></span>
+            </Navbar.Toggle>
+            <Navbar.Collapse id="basic-navbar-nav" className={`justify-content-end ${menuClass}`}>
               <Nav>
                 <NavLink to="/about" activeClassName="active">About</NavLink>
                 <NavLink to="/" exact activeClassName="active">Work</NavLink>

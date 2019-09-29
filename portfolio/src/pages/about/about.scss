@@ -14,18 +14,20 @@
     .about-headline {
       margin-bottom: 2rem;
       h1 {
-        margin: 0 0 1rem 0;
+        margin: 0 0 rem(33) 0;
       }
     }
+    p {
+      margin-bottom: rem(30);
+    }
     .fun {
-      margin-top: 3rem;
       .fun-headline,
       .fun-list {
         font-family: $reenie-beanie;
         font-size: rem(36);
       }
       .fun-headline {
-        margin-bottom: 2rem;
+        margin-bottom: rem(30);
       }
       .fun-list {
         list-style: none;
@@ -34,7 +36,12 @@
         .fun-list-item {
           position: relative;
           span {
-            margin-right: 5px;
+            display: inline-block;
+            width: rem(36);
+            margin-right: rem(10);
+            img {
+              width: 100%;
+            }
           }
         }
       }
