@@ -15,7 +15,8 @@ class ProjectCard extends Component {
           <Col className="project-card-content" lg={6}>
             <h1>{ this.props.title }</h1>
             <p>{ this.props.description }</p>
-            <Link to={ this.props.link }>{ this.props.linkText }</Link>
+            <Link to={ this.props.link }>{ this.props.linkText } { this.props.linkText === "View Project" ? <>&rarr;</> : ''}</Link>
+            <span className="project-card-content-caption">{this.props.caption}</span>
           </Col>
         </Row>
       </div>

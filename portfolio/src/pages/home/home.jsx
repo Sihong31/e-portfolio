@@ -35,21 +35,24 @@ class Home extends Component {
               link="/hermes" 
               linkText="View Project"
               backgroundColor="#DEEAFF"
-              imageUrl={thumbnailHermes} />
+              imageUrl={thumbnailHermes}
+              caption="UX Research | UI Design | Transportation | Mobile" />
             <ProjectCard 
               title="Robot as Tutor" 
               description="a mobile application that offers indoor navigation and real-time transit conditions." 
               link="/robot" 
               linkText="View Project"
               backgroundColor="#C4E7E9"
-              imageUrl={thumbnailRobot} />
+              imageUrl={thumbnailRobot}
+              caption="Research | Academic Study | EdTech | Robotics " />
             <ProjectCard 
               title="Tradewell Playbook" 
               description="a mobile application that offers indoor navigation and real-time transit conditions." 
               link="/tradewell" 
               linkText="Coming soon"
               backgroundColor="#DFE3FE"
-              imageUrl={thumbnailTradewell} />
+              imageUrl={thumbnailTradewell}
+              caption="UX Research  | UI Design | FinTech | Desktop" />
           </Col>
         </Row>
       </Container>

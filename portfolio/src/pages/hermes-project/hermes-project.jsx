@@ -38,6 +38,7 @@ import CarouselComponent from '../../components/carousel/carousel-component';
 import Standout from '../../components/standout/standout';
 import FinalDesign from '../../components/final-design/final-design';
 import ProjectsBlock from '../../components/projects-block/projects-block';
+import ListBlock from '../../components/list-block/list-block';
 
 class HermesProject extends Component {
   carousel1Content = [
@@ -79,6 +80,23 @@ class HermesProject extends Component {
       rightContent: "Students wanted routes to include within-building navigation and identify classrooms"
     }
   ];
+  listBlockContent1 = [
+    {
+      id: 1,
+      boldedCopyMiddle: "a decline of 2.7% school bus ridership",
+      body: "There has been a decline of 2.7% school bus ridership over the last three years."
+    },
+    {
+      id: 2,
+      boldedCopyMiddle: "an increase of use in RideSystems applications",
+      body: "There has been an increase of use in RideSystems applications despite declining ridership numbers."
+    },
+    {
+      id: 3,
+      boldedCopyMiddle: "do not provide transit times and directions",
+      body: "The current existing mobile applications available to students (e.g. Google Maps) do not provide transit times and directions related to school shuttles and escorts."
+    }
+  ]
 
   render() {
     return (
@@ -97,7 +115,26 @@ class HermesProject extends Component {
             roleDescription="UX Research, UX/UI Design"
             durationDescription="3 months"
             membersDescription="Annette Hong, June Byeon, Gabrielle Gayles, Daniela Marmolejos, Emily Gong" />
-          <SubHeadline text="FEATURES SUMMARY" />
+          <Row>
+            <Col md={6}>
+              <ContentBlock 
+                subHeadline="OUR CHALLENGE "
+                headline="Graduate students want to stay on schedule with their classes and activities."
+                body1="But their commutes rely on bus shuttles with unreliable timings. Routes are always changing with construction and traffic." />
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <ListBlock headline="Why does it matter?" items={this.listBlockContent1} />
+            </Col>
+          </Row>
+          <Row>
+            <Col md={6}>
+              <ContentBlock 
+                subHeadline="SOLUTION SUMMARY"
+                headline="A set of design guidelines when it comes to designing the best educational robot." />
+            </Col>
+          </Row>
           <ContentColumns 
             textAlignment="left"
             headline="Holistic Route Planning"

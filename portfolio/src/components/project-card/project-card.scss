@@ -16,8 +16,19 @@
   }
   .project-card-content {
     padding: 0;
+    a {
+      display: block;
+      font-family: $spectral;
+      font-size: $font-size-body;
+      margin-bottom: rem(47);
+    }
     p {
       margin-bottom: 2rem;
+    }
+    .project-card-content-caption {
+      display: block;
+      font-size: rem(18);
+      font-family: $karla;
     }
   }
 } 
