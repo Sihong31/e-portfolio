@@ -28,11 +28,11 @@ class SingleAccordion extends Component {
     return (
       <div className="single-accordion" onClick={this.handleClick}>
         <div className="single-accordion-headline" style={{ backgroundColor: `${this.props.backgroundColor}` }}>
-          {this.props.headline}
+          <p>{this.props.headline}</p>
           {this.renderIcon()}
         </div>
         <div className={`single-accordion-content ${activeClass}`}>
-          {this.props.content}
+          <p>{this.props.content}</p>
         </div>
       </div>
     )

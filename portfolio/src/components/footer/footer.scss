@@ -31,4 +31,18 @@
       margin: 0;
     }
   }
+  .footer-copyright {
+    margin-top: rem(120);
+    text-align: center;
+    @media (min-width: $md-min) {
+      margin-top: rem(240);
+    }
+    span {
+      display: inline-block;
+      width: rem(24);
+      img {
+        width: 100%;
+      }
+    }
+  }
 }

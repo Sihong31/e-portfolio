@@ -11,6 +11,9 @@
     @media (min-width: $md-min) {
       padding: rem(20) rem(60) rem(20) rem(15);
     }
+    p {
+      margin-bottom: 0;
+    }
     span {
       position: absolute;
       right: rem(20);

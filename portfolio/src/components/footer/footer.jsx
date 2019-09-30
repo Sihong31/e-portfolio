@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Container, Row, Col} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
+import iconBalloon from '../../assets/images/icons/icon-balloon.png';
+
 import './footer.scss';
 
 class Footer extends Component {
@@ -36,6 +38,11 @@ class Footer extends Component {
                   chat or work on something cool together!
                 </h2>
               </div>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <p className="footer-copyright">Designed with <span><img src={iconBalloon} alt="balloon" /></span> by Emily Gong 2019</p>
             </Col>
           </Row>
         </Container>

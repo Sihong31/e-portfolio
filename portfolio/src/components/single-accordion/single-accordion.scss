@@ -4,6 +4,9 @@
   font-size: $font-size-body;
   position: relative;
   overflow: hidden;
+  p {
+    margin-bottom: 0;
+  }
   .single-accordion-headline {
     border-radius: rem(5);
     padding: rem(20) rem(40) rem(20) rem(15);

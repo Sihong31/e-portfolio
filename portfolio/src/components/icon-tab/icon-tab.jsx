@@ -7,7 +7,7 @@ class IconTab extends Component {
     return (
       <div className="icon-tab">
         <div className="icon-tab-headline" style={{ backgroundColor: `${this.props.backgroundColor}` }}>
-          {this.props.headline}
+          <p>{this.props.headline}</p>
           <span><img src={this.props.icon} alt="icon" /></span>
         </div>
       </div>
