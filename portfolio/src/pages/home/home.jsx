@@ -52,6 +52,7 @@ class Home extends Component {
               linkText="Coming soon"
               backgroundColor="#DFE3FE"
               imageUrl={thumbnailTradewell}
+              tradewell={true}
               caption="UX Research  | UI Design | FinTech | Desktop" />
           </Col>
         </Row>

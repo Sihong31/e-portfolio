@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Router, Route, Switch } from 'react-router-dom';
-import { Container } from 'react-bootstrap';
 
 import './portfolio.scss';
 
 import history from './history';
+import TopScroll from './components/top-scroll/top-scroll';
 import Header from './components/header/header';
 import Footer from './components/footer/footer';
 import Home from './pages/home/home';
@@ -18,18 +18,20 @@ class Portfolio extends Component {
     return (
       <div className="portfolio">
         <Router history={ history } >
-          <Header historyInfo={ history } />
-          <div className="portfolio-container">
-            <Switch>
-              <Route path="/" exact component={ Home } />
-              <Route path="/about" exact component= { About } />
-              <Route path="/hermes" exact component= { HermesProject } />
-              <Route path="/robot" exact component= { RobotProject } />
-              <Route path="/tradewell" exact component= { TradewellProject } />
-              <Route component={ Home } />
-            </Switch>
-          </div>
-          <Footer />
+          <TopScroll>
+            <Header historyInfo={ history } />
+            <div className="portfolio-container">
+              <Switch>
+                <Route path="/" exact component={ Home } />
+                <Route path="/about" exact component= { About } />
+                <Route path="/hermes" exact component= { HermesProject } />
+                <Route path="/robot" exact component= { RobotProject } />
+                <Route path="/tradewell" exact component= { TradewellProject } />
+                <Route component={ Home } />
+              </Switch>
+            </div>
+            <Footer />
+          </TopScroll>
         </Router>
       </div>
     )

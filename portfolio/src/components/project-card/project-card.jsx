@@ -5,9 +5,26 @@ import { Link } from 'react-router-dom';
 import './project-card.scss';
 
 class ProjectCard extends Component {
-  render() {
+  renderCard = () => {
+    if (this.props.tradewell) {
+      return (
+        <div className="project-card" style={{ backgroundColor: `${this.props.backgroundColor}` }}>
+          <Row>
+            <Col className="project-card-image" lg={6}>
+              <img src={this.props.imageUrl} />
+            </Col>
+            <Col className="project-card-content" lg={6}>
+              <h1>{ this.props.title }</h1>
+              <p>{ this.props.description }</p>
+              <p>{ this.props.linkText } { this.props.linkText === "View Project" ? <>&rarr;</> : ''}</p>
+              <span className="project-card-content-caption">{this.props.caption}</span>
+            </Col>
+          </Row>
+        </div>
+      );
+    }
     return (
-      <div className="project-card" style={{ backgroundColor: `${this.props.backgroundColor}` }}>
+      <Link className="project-card" to={ this.props.link } style={{ backgroundColor: `${this.props.backgroundColor}` }}>
         <Row>
           <Col className="project-card-image" lg={6}>
             <img src={this.props.imageUrl} />
@@ -15,11 +32,19 @@ class ProjectCard extends Component {
           <Col className="project-card-content" lg={6}>
             <h1>{ this.props.title }</h1>
             <p>{ this.props.description }</p>
-            <Link to={ this.props.link }>{ this.props.linkText } { this.props.linkText === "View Project" ? <>&rarr;</> : ''}</Link>
+            <p>{ this.props.linkText } { this.props.linkText === "View Project" ? <>&rarr;</> : ''}</p>
             <span className="project-card-content-caption">{this.props.caption}</span>
           </Col>
         </Row>
-      </div>
+      </Link>
+    );
+  }
+
+  render() {
+    return (
+      <>
+        {this.renderCard()}
+      </>
     )
   }
 }
