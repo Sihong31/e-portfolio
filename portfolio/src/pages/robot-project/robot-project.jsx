@@ -35,29 +35,19 @@ class RobotProject extends Component {
   listBlockContent1 = [
     { 
       id: 1,
-      boldedCopyStart: "There is no significant difference",
-      body: "There is no significant difference in the affinity and trust of the human subject across the study designs."
+      boldedCopyStart: "The role of robots in education is not yet hard set",
+      body: "The role of robots in education is not yet hard set and more research must be done to understand the impact."
     },
     {
       id: 2,
-      boldedCopyMiddle: "is higher",
-      body: "The mean affinity towards the robot is higher for participants subject to positive feedback treatment.",
+      boldedCopyMiddle: "a non-peer teacher or tutor as helpers",
+      body: "Students often prefer a non-peer teacher or tutor as helpers that will better facilitate their learning and not judge them as inadequate.",
     },
     {
       id: 3,
-      boldedCopyMiddle: "is lower",
-      body: "The mean affinity towards the robot is lower for participants subject to negative feedback treatment."
+      boldedCopyEnd: "shortage of quality teachers and resources, an area where robot tutors could help.",
+      body: "The higher education space is currently dealing with shortage of quality teachers and resources, an area where robot tutors could help."
     },
-    {
-      id: 4,
-      boldedCopyStart: "The mean trust towards the robot is lower for participants subject to conflicting feedback treatment",
-      body: "The mean trust towards the robot is lower for participants subject to conflicting feedback treatment when compared to participants subject to non-conflicting feedback treatment."
-    },
-    {
-      id: 5,
-      boldedCopyStart: "The mean affinity towards the robot is lower for participants subject to conflicting feedback treatment",
-      body: "The mean affinity towards the robot is lower for participants subject to conflicting feedback treatment when compared to participants subject to non-conflicting feedback treatment."
-    }
   ]
   listBlockContent2 = [
     {
@@ -131,7 +121,7 @@ class RobotProject extends Component {
           </Row>
           <Row>
             <Col>
-              <ListBlock headline="Hypotheses" items={this.listBlockContent1} />
+              <ListBlock headline="Why does it matter?" items={this.listBlockContent1} />
             </Col>
           </Row>
           <Row>
