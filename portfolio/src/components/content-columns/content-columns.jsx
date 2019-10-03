@@ -13,7 +13,7 @@ class ContentColumns extends Component {
             <p>{this.props.body1}</p>
             <p>{this.props.body2}</p>
             <div className="column-reason-content">
-              <h4>REASON</h4>
+              <h4>{this.props.reasonTitle}</h4>
               <p>{this.props.reasonBody}</p>
             </div>
           </Col>
@@ -33,7 +33,7 @@ class ContentColumns extends Component {
             <p>{this.props.body1}</p>
             <p>{this.props.body2}</p>
             <div className="column-reason-content">
-              <h4>REASON</h4>
+              <h4>{this.props.reasonTitle}</h4>
               <p>{this.props.reasonBody}</p>
             </div>
           </Col>

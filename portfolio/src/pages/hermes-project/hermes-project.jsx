@@ -141,6 +141,7 @@ class HermesProject extends Component {
             colSizeRight="4"
             headline="Holistic Route Planning"
             body1="We designed an easily navigatable start-to-end interface that allows for conditional information on public buses, shuttles and within-building navigation at their fingertips."
+            reasonTitle="REASON"
             reasonBody="Our research showed that people had a hard time getting used to unfamiliar route without relevant context and information."
             imageUrl={holisticRoute} />
           <ContentColumns
@@ -149,6 +150,7 @@ class HermesProject extends Component {
             colSizeRight="4"
             headline="Within-building navigation"
             body1="We incorporated an in-door navigation feature as having classrooms as part of the holistic route planning experience helps students pinpoint a more exact route and get there more quickly."
+            reasonTitle="REASON"
             reasonBody="Our research showed that students did a great deal of wayfinding indoors and valued shortcuts that included faster ways to get to class."      
             imageUrl={buildingNavigation} />
           <ContentColumns 
@@ -157,6 +159,7 @@ class HermesProject extends Component {
             colSizeRight="4"
             headline="Crowdsourcing Alerts"
             body1="We designed routes that allowed for users to easily provide direct input on travel conditions while on route to their destination.  real-time bus statuses, unsafe areas, and/or construction alerts."
+            reasonTitle="REASON"
             reasonBody="Our research showed that students wanted to share insider information they had about road conditions but only would do it when prompted."
             imageUrl={crowdSourcingAlert} />
         </Container>

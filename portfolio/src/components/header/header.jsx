@@ -13,7 +13,9 @@ class Header extends Component {
   }
 
   handleNavClick = () => {
-    this.burgerToggle.current.click();
+    if (window.innerWidth < 768) {
+      this.burgerToggle.current.click();
+    }
   }
 
   render() {
