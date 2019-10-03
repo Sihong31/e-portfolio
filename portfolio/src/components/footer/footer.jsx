@@ -24,7 +24,7 @@ class Footer extends Component {
               <p>MORE <Link to="/about"><strong>ABOUT ME</strong></Link></p>
             </Col>
             <Col xs={12} md={6}>
-              <p>
+              <p className="contact-me">
                 CONTACT ME
               </p>
               <div className="footer-right-content">

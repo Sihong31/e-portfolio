@@ -12,6 +12,10 @@ class ContentColumns extends Component {
             <h2>{this.props.headline}</h2>
             <p>{this.props.body1}</p>
             <p>{this.props.body2}</p>
+            <div className="column-reason-content">
+              <h4>REASON</h4>
+              <p>{this.props.reasonBody}</p>
+            </div>
           </Col>
           <Col md={this.props.colSizeRight} className="column-text-left column-right">
             <img src={this.props.imageUrl} alt="content" />
@@ -28,6 +32,10 @@ class ContentColumns extends Component {
             <h2>{this.props.headline}</h2>
             <p>{this.props.body1}</p>
             <p>{this.props.body2}</p>
+            <div className="column-reason-content">
+              <h4>REASON</h4>
+              <p>{this.props.reasonBody}</p>
+            </div>
           </Col>
         </Row>
       );

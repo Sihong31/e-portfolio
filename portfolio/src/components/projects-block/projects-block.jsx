@@ -6,6 +6,10 @@ import './projects-block.scss';
 
 class ProjectsBlock extends Component {
   render() {
+    let maxWidthClass = '';
+    if (this.props.project === "hermes") {
+      maxWidthClass = 'hermes-max-width';
+    }
     return (
       <div className="projects-block">
         <h1>More projects</h1>
@@ -26,7 +30,7 @@ class ProjectsBlock extends Component {
             <Link className="project-2" to={this.props.projectUrl2} style={{ backgroundColor: `${this.props.backgroundColor2}` }}>
               <Row>
                 <Col className="project-image" lg={5}>
-                  <img src={this.props.imageUrl2} alt="Project 2" />
+                  <img src={this.props.imageUrl2} className={maxWidthClass} alt="Project 2" />
                 </Col>
                 <Col className="project-headline" lg={7}>
                   <h1>{this.props.headline2}</h1>

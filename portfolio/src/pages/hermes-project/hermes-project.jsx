@@ -132,7 +132,7 @@ class HermesProject extends Component {
             <Col md={6}>
               <ContentBlock 
                 subHeadline="SOLUTION SUMMARY"
-                headline="A set of design guidelines when it comes to designing the best educational robot." />
+                headline="Cultivating a holistic transportation experience with real-time changes and instructions." />
             </Col>
           </Row>
           <ContentColumns 
@@ -140,24 +140,24 @@ class HermesProject extends Component {
             colSizeLeft="8"
             colSizeRight="4"
             headline="Holistic Route Planning"
-            body1="Users can easily navigate the start-to-end to their transit iterinary with conditional information on public buses, shuttles and within-building navigation at their fingertips."
-            body2="This all-in-one approach helps new arrivals travel around and on campus with ease."
+            body1="We designed an easily navigatable start-to-end interface that allows for conditional information on public buses, shuttles and within-building navigation at their fingertips."
+            reasonBody="Our research showed that people had a hard time getting used to unfamiliar route without relevant context and information."
             imageUrl={holisticRoute} />
           <ContentColumns
             textAlignment="right"
             colSizeLeft="8"
             colSizeRight="4"
             headline="Within-building navigation"
-            body1="Having classrooms as part of the holistic route planning experience helps students pinpoint a more exact route and get there more quickly."
-            body2="Providing indoor shortcuts would be the next step in leveraging indoor mapping technology."
+            body1="We incorporated an in-door navigation feature as having classrooms as part of the holistic route planning experience helps students pinpoint a more exact route and get there more quickly."
+            reasonBody="Our research showed that students did a great deal of wayfinding indoors and valued shortcuts that included faster ways to get to class."      
             imageUrl={buildingNavigation} />
           <ContentColumns 
             textAlignment="left"
             colSizeLeft="8"
             colSizeRight="4"
             headline="Crowdsourcing Alerts"
-            body1="Users will be able to easily provide direct input on travel conditions while on route to their destination."
-            body2="The collected information will be used to help users be alert ahead on bus statuses, unsafe areas, and/or construction."
+            body1="We designed routes that allowed for users to easily provide direct input on travel conditions while on route to their destination.  real-time bus statuses, unsafe areas, and/or construction alerts."
+            reasonBody="Our research showed that students wanted to share insider information they had about road conditions but only would do it when prompted."
             imageUrl={crowdSourcingAlert} />
         </Container>
         <ProjectRoadmap 
@@ -178,7 +178,7 @@ class HermesProject extends Component {
           <Row>
             <Col md={6}>
               <ContentBlock
-                headline="Figuring out how people use the current app"
+                headline="Figuring out how people use the current app through UX audit, data and think-alouds"
                 subHeadline="STEPS IN EXPLORATORY RESEARCH"
                 body1="We used data and evaluative think-alouds to better identify current ridership trends on the CMU shuttle and to gather key information from CMU students about when they used RideSystems, the current existing CMU transit app."
                 url="https://drive.google.com/open?id=1PjeCiVqzqfDdTRLQVHfYiAyVXfVELIgBM9PhEYxgKLc"
@@ -213,7 +213,7 @@ class HermesProject extends Component {
           <Row>
             <Col md={6}>
               <ContentBlock
-                headline="Understanding the current commute"
+                headline="Understanding the current commute through immersion"
                 body1="We also kicked off the project by immersing in a start-to-end round-trip from our homes to the CMU campus."
                 body2="We paired the ride experience of taking the CMU Shuttle with the RideSystems app and Pittsburgh Port Authority buses with a companion app Transit." />
             </Col>
@@ -232,7 +232,7 @@ class HermesProject extends Component {
           <Row>
             <Col md={6}>
               <ContentBlock
-                headline="Mapping out the relationships between taking and providing transportation"
+                headline="Mapping out the relationships between taking and providing transportation through flow models"
                 body1="GSA provided us with pre-recorded interview data that gave us an insider's perspective on all the available transit options available to the CMU community."
                 body2="We used flow and sequence models to visualize the relationships among the different departments in charge of providing various transportation means around CMU."
                 url="https://drive.google.com/open?id=1B1_rVc7roSNAm35s1vqlyPjW6DamWF7afCsceZBJI1A"
@@ -259,7 +259,7 @@ class HermesProject extends Component {
           <Row>
             <Col md={6}>
               <ContentBlock
-                headline="Pinpointing pain points in existing CMU-specific apps"
+                headline="Pinpointing pain points in existing CMU-specific apps through competitive research"
                 body1="We were also interested in finding out why exactly existing transit apps like Tiramisu were not more pervasive among students."
                 body2="We used Think-Aloud interviews with undergraduate and graduate students to better identify what possible breakdowns users had when using the app."
                 url="https://drive.google.com/open?id=1S4LnmhW_o6gKVxfrMpXnDj3ie-JpE23XQ-oalVmIo6g"
@@ -302,7 +302,7 @@ class HermesProject extends Component {
           <Row>
             <Col md={6}>
               <ContentBlock
-                headline="Digging deeper into why students commute the way they do"
+                headline="Digging deeper into why students commute the way they do through contextual inquiry"
                 body1="We interviewed two rounds of contextual inquiries and semi-structured interviews with undergraduate and graduate students to tease out what were high priority concerns that they considered when commuting."
                 body2="We then synthesized our collective findings through affinity diagramming."
                 url="https://drive.google.com/open?id=1Cciqg62mzFnFZZ_zNiojgqazPtV4-Sg5AeBnfBD_MR0"

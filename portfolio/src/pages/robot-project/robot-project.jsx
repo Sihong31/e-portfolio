@@ -310,7 +310,8 @@ class RobotProject extends Component {
           backgroundColor2="#deeaff"
           imageUrl2={thumbnailHermes}
           projectUrl2="/hermes"
-          headline2="Hermes" />
+          headline2="Hermes"
+          project="hermes" />
       </div>
     )
   }

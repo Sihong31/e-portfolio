@@ -11,9 +11,23 @@
   p {
     margin: 0;
   }
+  .contact-me {
+   margin-top: rem(80);
+   @media (min-width: $md-min) {
+     margin-top: 0;
+   } 
+  }
   .footer-left-content,
   .footer-right-content {
     margin: rem(32) 0;
+    h2 {
+      margin: 0;
+    }
+  }
+  .footer-right-content {
+    h2 a {
+      font-size: rem(27);
+    }
     .footer-right-social-content {
       margin-bottom: rem(32);
       a {
@@ -26,9 +40,6 @@
       .fa-linkedin {
         color: #0077b5;
       }
-    }
-    h2 {
-      margin: 0;
     }
   }
   .footer-copyright {

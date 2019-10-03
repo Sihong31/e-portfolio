@@ -11,11 +11,11 @@ class CarouselItem extends Component {
       return (
         <div className="carousel-quote-item">
           <Row>
-            <Col xs={6} className="carousel-column-left">
+            <Col md={6} className="carousel-column-left">
               <span>“</span>
               <h2>{this.props.headline}</h2>
             </Col>
-            <Col xs={6} className="carousel-column-right">
+            <Col md={6} className="carousel-column-right">
               <p>{this.props.description}</p>
             </Col>
           </Row>
@@ -30,10 +30,10 @@ class CarouselItem extends Component {
             </Col>
           </Row>
           <Row className="carousel-image-item-content-row">
-            <Col xs={6} className="carousel-column-left">
+            <Col md={6} className="carousel-column-left">
               <img src={this.props.leftImage} alt="Left side imagery" />
             </Col>
-            <Col xs={6} className="carousel-column-right">
+            <Col md={6} className="carousel-column-right">
               <p>{this.props.rightContent}</p>
             </Col>
           </Row>

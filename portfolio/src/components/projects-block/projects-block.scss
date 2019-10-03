@@ -6,6 +6,11 @@
   @media (min-width: $xl-min) {
     padding: 0 rem(50);
   }
+  @media (max-width: $lg-max) {
+    .hermes-max-width {
+      max-width: rem(120);
+    }
+  }
   h1 {
     font-family: $reenie-beanie;
     text-align: center;

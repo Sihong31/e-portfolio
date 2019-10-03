@@ -39,7 +39,7 @@ class Home extends Component {
               caption="UX Research | UI Design | Transportation | Mobile" />
             <ProjectCard 
               title="Robot as Tutor" 
-              description="a mobile application that offers indoor navigation and real-time transit conditions." 
+              description="a study around the role of robots as educators in one-to-one tutoring spaces" 
               link="/robot" 
               linkText="View Project"
               backgroundColor="#C4E7E9"
@@ -47,7 +47,7 @@ class Home extends Component {
               caption="Research | Academic Study | EdTech | Robotics " />
             <ProjectCard 
               title="Tradewell Playbook" 
-              description="a mobile application that offers indoor navigation and real-time transit conditions." 
+              description="a set of alerting guidelines aimed to create leader advantages in the dark pool trading space" 
               link="/tradewell" 
               linkText="Coming soon"
               backgroundColor="#DFE3FE"

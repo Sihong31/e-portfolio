@@ -6,6 +6,10 @@
   .carousel-quote-item {
     .carousel-column-left {
       position: relative;
+      margin-bottom: rem(40);
+      @media (min-width: $md-min) {
+        margin-bottom: 0;
+      }
       span {
         color: $carousel-color;
         font-size: rem(48);
@@ -24,8 +28,10 @@
     .carousel-image-item-content-row {
       align-items: center;
       .carousel-column-left {
+        margin-bottom: rem(40);
         @media (min-width: $md-min) {
           padding-right: rem(40);
+          margin-bottom: 0;
         }
         img {
           width: 100%;
