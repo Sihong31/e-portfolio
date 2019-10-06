@@ -14,7 +14,7 @@ class TradewellProject extends Component {
         <Container>
           <Row>
             <Col style={{ textAlign: 'center' }}>
-              <h1>COMING SOON...</h1>
+              <h1 style={{ marginTop: '100px' }}>COMING SOON...</h1>
             </Col>
           </Row>
         </Container>

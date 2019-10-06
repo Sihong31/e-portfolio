@@ -1,0 +1,45 @@
+@import '../../assets/styles/variables.scss';
+
+.scroll-section {
+  background: transparent;
+  padding-left: rem(8);
+  position: fixed;
+  z-index: 20;
+  .scroll-content {
+    display: flex;
+    align-items: center;
+    margin-bottom: rem(10);
+    position: relative;
+    a {
+      background-color: transparent;
+      border: 1px solid #000;
+      border-radius: 100%;
+      margin-right: rem(5);
+      width: rem(12);
+      height: rem(12);
+      transition: background-color .5s ease;
+      &.active {
+        background-color: #808080;
+      }
+    }
+    span {
+      border-radius: rem(5);
+      font-size: rem(12);
+      background: #000;
+      color: #fff;
+      font-family: $karla;
+      padding: 3px;
+      opacity: 0;
+      transition: opacity .35s ease;
+    }
+    &:hover {
+      a {
+        background-color: #808080;
+      }
+      span {
+        display: inline-block;
+        opacity: 1;
+      }
+    }
+  }
+}

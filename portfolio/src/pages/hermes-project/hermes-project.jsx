@@ -39,6 +39,7 @@ import Standout from '../../components/standout/standout';
 import FinalDesign from '../../components/final-design/final-design';
 import ProjectsBlock from '../../components/projects-block/projects-block';
 import ListBlock from '../../components/list-block/list-block';
+import ScrollSection from '../../components/scroll-section/scroll-section';
 
 class HermesProject extends Component {
   carousel1Content = [
@@ -98,9 +99,49 @@ class HermesProject extends Component {
     }
   ]
 
+  scrollSectionLinks = [
+    {
+      scrollToId: "scroll-project-overview",
+      linkName: "Project Overview"
+    },
+    {
+      scrollToId: "scroll-project-roadmap",
+      linkName: "Project Roadmap"
+    },
+    {
+      scrollToId: "scroll-discovery",
+      linkName: "Discovery"
+    },
+    {
+      scrollToId: "scroll-defining-needs",
+      linkName: "Defining Needs"
+    },
+    {
+      scrollToId: "scroll-defining-scope",
+      linkName: "Defining Scope"
+    },
+    {
+      scrollToId: "scroll-ideation",
+      linkName: "Ideation"
+    },
+    {
+      scrollToId: "scroll-iteration",
+      linkName: "Iteration"
+    },
+    {
+      scrollToId: "scroll-final-design",
+      linkName: "Final Design"
+    },
+    {
+      scrollToId: "scroll-reflections",
+      linkName: "Reflections"
+    }
+  ];
+
   render() {
     return (
       <div className="hermes">
+        <ScrollSection links={this.scrollSectionLinks}/>
         <ProjectHero 
           backgroundColor="#DEEAFF"
           date="SEPTEMBER - DECEMBER  2018"
@@ -108,8 +149,8 @@ class HermesProject extends Component {
           description="a mobile application that offers indoor navigation and real-time transit conditions"
           projectType="hermes"
           imageUrl={heroHermes} />
-        <Container>
-          <ProjectOverview 
+        <Container id="scroll-project-overview">
+          <ProjectOverview
             body1="Graduate students want to stay on schedule with their classes and activities. But their commutes rely on bus shuttles with unreliable timings. Routes are always changing with construction and traffic."
             body2="CMU's Graduate Student Association (GSA) tasked our team to improve their CMU Shuttle and Escort Services and their existing online resources."
             roleDescription="UX Research, UX/UI Design"
@@ -163,253 +204,263 @@ class HermesProject extends Component {
             reasonBody="Our research showed that students wanted to share insider information they had about road conditions but only would do it when prompted."
             imageUrl={crowdSourcingAlert} />
         </Container>
-        <ProjectRoadmap 
-          backgroundColor="#D5DCE7"
-          imageUrl={projectRoadmapImage}
-          leftBody1="We practiced a mixed-methods research of both quantitative and qualitative UX research."
-          leftBody2="I compared log data insights with behavioral findings from actual users. From these, my team made timely design decisions to create an approachable solution."
-          rightBody1="Immersion, Competitive Research, Testing , UX Audit, Data, Contextual Inquiry, Interviews, Speed Dating, Think-Alouds, Prototyping" />
+        <div id="scroll-project-roadmap">
+          <ProjectRoadmap
+            backgroundColor="#D5DCE7"
+            imageUrl={projectRoadmapImage}
+            leftBody1="We practiced a mixed-methods research of both quantitative and qualitative UX research."
+            leftBody2="I compared log data insights with behavioral findings from actual users. From these, my team made timely design decisions to create an approachable solution."
+            rightBody1="Immersion, Competitive Research, Testing , UX Audit, Data, Contextual Inquiry, Interviews, Speed Dating, Think-Alouds, Prototyping" />
+        </div>
+        <div className="scroll-discovery">
         <Container>
-          <Row>
-            <Col md={6}>
-              <HeadlineBlock
-                headline="Discovery"
-                subHeadline="DOING THE RESEARCH"
-                description="In this phase, our team primarily worked through learning more about the current state of the CMU transportation landscape." />
-            </Col>
-          </Row>
-          <Row>
-            <Col md={6}>
-              <ContentBlock
-                headline="Figuring out how people use the current app through UX audit, data and think-alouds"
-                subHeadline="STEPS IN EXPLORATORY RESEARCH"
-                body1="We used data and evaluative think-alouds to better identify current ridership trends on the CMU shuttle and to gather key information from CMU students about when they used RideSystems, the current existing CMU transit app."
-                url="https://drive.google.com/open?id=1PjeCiVqzqfDdTRLQVHfYiAyVXfVELIgBM9PhEYxgKLc"
-                urlDescription="Check out our interview script >" />
-            </Col>
-          </Row>
-          <SubHeadline text="KEY FINDINGS" />
-          <Row>
-            <Col md={8}>
+            <Row>
+              <Col md={6}>
+                <HeadlineBlock
+                  headline="Discovery"
+                  subHeadline="DOING THE RESEARCH"
+                  description="In this phase, our team primarily worked through learning more about the current state of the CMU transportation landscape." />
+              </Col>
+            </Row>
+            <Row>
+              <Col md={6}>
+                <ContentBlock
+                  headline="Figuring out how people use the current app through UX audit, data and think-alouds"
+                  subHeadline="STEPS IN EXPLORATORY RESEARCH"
+                  body1="We used data and evaluative think-alouds to better identify current ridership trends on the CMU shuttle and to gather key information from CMU students about when they used RideSystems, the current existing CMU transit app."
+                  url="https://drive.google.com/open?id=1PjeCiVqzqfDdTRLQVHfYiAyVXfVELIgBM9PhEYxgKLc"
+                  urlDescription="Check out our interview script >" />
+              </Col>
+            </Row>
+           <SubHeadline text="KEY FINDINGS" />
+            <Row>
+              <Col md={8}>
+                <SingleAccordion 
+                  headline="People have been using RideSystems more despite less people riding on the CMU shuttles." 
+                  content="4006 new RideSystem users logged in in the past two years but a 2.7% declined in ridership numbers."
+                  backgroundColor="#D5DCE7" />
+              </Col>
+            </Row>
+            <Row>
+              <Col md={8}>
               <SingleAccordion 
-                headline="People have been using RideSystems more despite less people riding on the CMU shuttles." 
-                content="4006 new RideSystem users logged in in the past two years but a 2.7% declined in ridership numbers."
+                headline="Getting familiar with an unfamiliar route on the RideSystems app is difficult." 
+                content="The app provided no holistic visual overview of available shuttle routes on the map. The app also did not provide any landmarks or previous known searches on the map to help users understand what they were seeing." 
                 backgroundColor="#D5DCE7" />
-            </Col>
-          </Row>
-          <Row>
-            <Col md={8}>
-            <SingleAccordion 
-              headline="Getting familiar with an unfamiliar route on the RideSystems app is difficult." 
-              content="The app provided no holistic visual overview of available shuttle routes on the map. The app also did not provide any landmarks or previous known searches on the map to help users understand what they were seeing." 
-              backgroundColor="#D5DCE7" />
-            </Col>
-          </Row>
-          <Row>
-            <Col md={8} className="portfolio-content-group">
-            <SingleAccordion 
-              headline="Using the application requires working with other applications." 
-              content="Users were unable to understand the timelines of the shuttle or escort services without turning to additional CMU web map services. They also had to switch between the app and Google Maps to figure out the exact start and finish of a route." 
-              backgroundColor="#D5DCE7" />
-            </Col>
-          </Row>
-          <Row>
-            <Col md={6}>
-              <ContentBlock
-                headline="Understanding the current commute through immersion"
-                body1="We also kicked off the project by immersing in a start-to-end round-trip from our homes to the CMU campus."
-                body2="We paired the ride experience of taking the CMU Shuttle with the RideSystems app and Pittsburgh Port Authority buses with a companion app Transit." />
-            </Col>
-          </Row>
-          <SubHeadline text="KEY FINDINGS" />
-          <Row>
-            <Col>
-              <FullImage imageUrl={keyRide} altText="Key Ride" />
-            </Col>
-          </Row>
-          <Row>
-            <Col style={{ marginBottom: '50px' }}>
-              <FullImage imageUrl={keyApp} altText="Key App" />
-            </Col>
-          </Row>
-          <Row>
-            <Col md={6}>
-              <ContentBlock
-                headline="Mapping out the relationships between taking and providing transportation through flow models"
-                body1="GSA provided us with pre-recorded interview data that gave us an insider's perspective on all the available transit options available to the CMU community."
-                body2="We used flow and sequence models to visualize the relationships among the different departments in charge of providing various transportation means around CMU."
-                url="https://drive.google.com/open?id=1B1_rVc7roSNAm35s1vqlyPjW6DamWF7afCsceZBJI1A"
-                urlDescription="Check out the flow model >" />
-            </Col>
-          </Row>
-          <SubHeadline text="KEY FINDINGS" />
-          <Row>
-            <Col md={8}>
-              <IconTab 
-                backgroundColor="#D5DCE7"
-                headline="Students were the main reason behind shuttle service use as faculty were not as inclined to use it."
-                icon={iconBulb} />
-            </Col>
-          </Row>
-          <Row>
-            <Col md={8} className="portfolio-content-group">
+              </Col>
+            </Row>
+            <Row>
+              <Col md={8} className="portfolio-content-group">
+              <SingleAccordion 
+                headline="Using the application requires working with other applications." 
+                content="Users were unable to understand the timelines of the shuttle or escort services without turning to additional CMU web map services. They also had to switch between the app and Google Maps to figure out the exact start and finish of a route." 
+                backgroundColor="#D5DCE7" />
+              </Col>
+            </Row>
+            <Row>
+              <Col md={6}>
+                <ContentBlock
+                  headline="Understanding the current commute through immersion"
+                  body1="We also kicked off the project by immersing in a start-to-end round-trip from our homes to the CMU campus."
+                  body2="We paired the ride experience of taking the CMU Shuttle with the RideSystems app and Pittsburgh Port Authority buses with a companion app Transit." />
+              </Col>
+            </Row>
+            <SubHeadline text="KEY FINDINGS" />
+            <Row>
+              <Col>
+                <FullImage imageUrl={keyRide} altText="Key Ride" />
+              </Col>
+            </Row>
+            <Row>
+              <Col style={{ marginBottom: '50px' }}>
+                <FullImage imageUrl={keyApp} altText="Key App" />
+              </Col>
+            </Row>
+            <Row>
+              <Col md={6}>
+                <ContentBlock
+                  headline="Mapping out the relationships between taking and providing transportation through flow models"
+                  body1="GSA provided us with pre-recorded interview data that gave us an insider's perspective on all the available transit options available to the CMU community."
+                  body2="We used flow and sequence models to visualize the relationships among the different departments in charge of providing various transportation means around CMU."
+                  url="https://drive.google.com/open?id=1B1_rVc7roSNAm35s1vqlyPjW6DamWF7afCsceZBJI1A"
+                  urlDescription="Check out the flow model >" />
+              </Col>
+            </Row>
+            <SubHeadline text="KEY FINDINGS" />
+            <Row>
+              <Col md={8}>
+                <IconTab 
+                  backgroundColor="#D5DCE7"
+                  headline="Students were the main reason behind shuttle service use as faculty were not as inclined to use it."
+                  icon={iconBulb} />
+              </Col>
+            </Row>
+            <Row>
+              <Col md={8} className="portfolio-content-group">
+                <IconTab 
+                    backgroundColor="#D5DCE7"
+                    headline="Students chose to use quicker modes of transportation like Uber over the CMU shuttle."
+                    icon={iconWarning} />
+              </Col>
+            </Row>
+            <Row>
+              <Col md={6}>
+                <ContentBlock
+                  headline="Pinpointing pain points in existing CMU-specific apps through competitive research"
+                  body1="We were also interested in finding out why exactly existing transit apps like Tiramisu were not more pervasive among students."
+                  body2="We used Think-Aloud interviews with undergraduate and graduate students to better identify what possible breakdowns users had when using the app."
+                  url="https://drive.google.com/open?id=1S4LnmhW_o6gKVxfrMpXnDj3ie-JpE23XQ-oalVmIo6g"
+                  urlDescription="Check out the interview script >" />
+              </Col>
+            </Row>
+            <SubHeadline text="KEY FINDINGS" />
+            <Row>
+              <Col md={8}>
+                <IconTab 
+                  backgroundColor="#D5DCE7"
+                  headline="CMU-specific apps like Tiramisu had similar limits around holistic route planning as RideSystems."
+                  icon={iconBulb} />
+              </Col>
+            </Row>
+            <Row>
+              <Col md={8} className="portfolio-content-group">
+                <IconTab 
+                  backgroundColor="#D5DCE7"
+                  headline="The app showcased only the specific transportation options rather than searched transit routes."
+                  icon={iconWarning} />
+              </Col>
+            </Row>
+          </Container>
+          <HangingBlock
+            backgroundColor="#DEEAFF"
+            headline="RESEARCH HIGHLIGHTS"
+            body1="Our research revealed that it was mostly students that used the application far more than anyone else in the community."
+            body2="The current transit applications that supplied CMU specific transit information were lacking in answering to what students needed." />
+        </div>
+        <div className="scroll-defining-needs">
+          <Container>
+            <Row>
+              <Col md={6}>
+                <HeadlineBlock
+                  headline="Defining Needs"
+                  subHeadline="FOCUSING ON USERS"
+                  description="Having figured out our end user, our team concentrated next on getting a deep dive into how exactly undergraduate and graduate students navigated transportation for school." />
+              </Col>
+            </Row>
+            <SubHeadline text="STEPS IN GENERATIVE RESEARCH" />
+            <Row>
+              <Col md={6}>
+                <ContentBlock
+                  headline="Digging deeper into why students commute the way they do through contextual inquiry"
+                  body1="We interviewed two rounds of contextual inquiries and semi-structured interviews with undergraduate and graduate students to tease out what were high priority concerns that they considered when commuting."
+                  body2="We then synthesized our collective findings through affinity diagramming."
+                  url="https://drive.google.com/open?id=1Cciqg62mzFnFZZ_zNiojgqazPtV4-Sg5AeBnfBD_MR0"
+                  urlDescription="Check out our affinity notes >" />
+              </Col>
+            </Row>
+            <div style={{ marginTop: '-70px' }}>
+              <ColumnImages
+                imageUrl1={affinityDiagram1}
+                imageUrl2={affinityDiagram2} />
+            </div>
+            <SubHeadline text="KEY FINDINGS" />
+            <CarouselComponent carouselType="quote" content={this.carousel1Content} />
+            <Row>
+              <Col md={6}>
+                <ContentBlock
+                  headline="Understanding how users get information on the fly through think-alouds"
+                  body1="We looked into crowdsourcing as a possible solution to have current CMU students provide transit information, i.e. road conditions, traffic, bus full, to other students."
+                  body2="We conducted a round of Think-Alouds on Waze, an app currently crowdsourcing related transit information around the CMU community. This was done alongside our contextual inquiries and interviews to learn how students would want related travel alerts or informational tips to appear and how they would want to use them."
+                  url="https://docs.google.com/document/d/1Wgcb4wUDr330wj3dBE_3Vr4i6DjHlnN4qUhOD2JFDQg/edit?usp=sharing"
+                  urlDescription="Check out the interview script >" />
+              </Col>
+            </Row>
+            <SubHeadline text="KEY FINDINGS" />
+            <Row>
+              <Col md={8}>
               <IconTab 
                   backgroundColor="#D5DCE7"
-                  headline="Students chose to use quicker modes of transportation like Uber over the CMU shuttle."
+                  headline="It is useful to filter information so that users can only see what is relevant in the current moment."
+                  icon={iconBulb} />
+              </Col>
+            </Row>
+            <Row>
+              <Col md={8} className="portfolio-content-group">
+              <IconTab 
+                  backgroundColor="#D5DCE7"
+                  headline="Having too much information show up on a map interface  make it difficult to complete routes."
                   icon={iconWarning} />
-            </Col>
-          </Row>
-          <Row>
-            <Col md={6}>
-              <ContentBlock
-                headline="Pinpointing pain points in existing CMU-specific apps through competitive research"
-                body1="We were also interested in finding out why exactly existing transit apps like Tiramisu were not more pervasive among students."
-                body2="We used Think-Aloud interviews with undergraduate and graduate students to better identify what possible breakdowns users had when using the app."
-                url="https://drive.google.com/open?id=1S4LnmhW_o6gKVxfrMpXnDj3ie-JpE23XQ-oalVmIo6g"
-                urlDescription="Check out the interview script >" />
-            </Col>
-          </Row>
-          <SubHeadline text="KEY FINDINGS" />
-          <Row>
-            <Col md={8}>
-              <IconTab 
-                backgroundColor="#D5DCE7"
-                headline="CMU-specific apps like Tiramisu had similar limits around holistic route planning as RideSystems."
-                icon={iconBulb} />
-            </Col>
-          </Row>
-          <Row>
-            <Col md={8} className="portfolio-content-group">
-              <IconTab 
-                backgroundColor="#D5DCE7"
-                headline="The app showcased only the specific transportation options rather than searched transit routes."
-                icon={iconWarning} />
-            </Col>
-          </Row>
-        </Container>
-        <HangingBlock
-          backgroundColor="#DEEAFF"
-          headline="RESEARCH HIGHLIGHTS"
-          body1="Our research revealed that it was mostly students that used the application far more than anyone else in the community."
-          body2="The current transit applications that supplied CMU specific transit information were lacking in answering to what students needed." />
-        <Container>
-          <Row>
-            <Col md={6}>
-              <HeadlineBlock
-                headline="Defining Needs"
-                subHeadline="FOCUSING ON USERS"
-                description="Having figured out our end user, our team concentrated next on getting a deep dive into how exactly undergraduate and graduate students navigated transportation for school." />
-            </Col>
-          </Row>
-          <SubHeadline text="STEPS IN GENERATIVE RESEARCH" />
-          <Row>
-            <Col md={6}>
-              <ContentBlock
-                headline="Digging deeper into why students commute the way they do through contextual inquiry"
-                body1="We interviewed two rounds of contextual inquiries and semi-structured interviews with undergraduate and graduate students to tease out what were high priority concerns that they considered when commuting."
-                body2="We then synthesized our collective findings through affinity diagramming."
-                url="https://drive.google.com/open?id=1Cciqg62mzFnFZZ_zNiojgqazPtV4-Sg5AeBnfBD_MR0"
-                urlDescription="Check out our affinity notes >" />
-            </Col>
-          </Row>
-          <div style={{ marginTop: '-70px' }}>
-            <ColumnImages
-              imageUrl1={affinityDiagram1}
-              imageUrl2={affinityDiagram2} />
-          </div>
-          <SubHeadline text="KEY FINDINGS" />
-          <CarouselComponent carouselType="quote" content={this.carousel1Content} />
-          <Row>
-            <Col md={6}>
-              <ContentBlock
-                headline="Understanding how users get information on the fly through think-alouds"
-                body1="We looked into crowdsourcing as a possible solution to have current CMU students provide transit information, i.e. road conditions, traffic, bus full, to other students."
-                body2="We conducted a round of Think-Alouds on Waze, an app currently crowdsourcing related transit information around the CMU community. This was done alongside our contextual inquiries and interviews to learn how students would want related travel alerts or informational tips to appear and how they would want to use them."
-                url="https://docs.google.com/document/d/1Wgcb4wUDr330wj3dBE_3Vr4i6DjHlnN4qUhOD2JFDQg/edit?usp=sharing"
-                urlDescription="Check out the interview script >" />
-            </Col>
-          </Row>
-          <SubHeadline text="KEY FINDINGS" />
-          <Row>
-            <Col md={8}>
-            <IconTab 
-                backgroundColor="#D5DCE7"
-                headline="It is useful to filter information so that users can only see what is relevant in the current moment."
-                icon={iconBulb} />
-            </Col>
-          </Row>
-          <Row>
-            <Col md={8} className="portfolio-content-group">
-            <IconTab 
-                backgroundColor="#D5DCE7"
-                headline="Having too much information show up on a map interface  make it difficult to complete routes."
-                icon={iconWarning} />
-            </Col>
-          </Row>
-        </Container>
-        <HangingBlock
-          backgroundColor="#DEEAFF"
-          headline="RESEARCH HIGHLIGHTS"
-          body1="Having talked to our users first-hand, the strongest pain points were in getting information around campus navigation, speed, and unpredictable transport conditions."
-          body2="Apps that currently crowdsource transit information are too cluttered and difficult to use to effectively navigate the campus." />
-        <Container>
-          <Row>
-            <Col md={6}>
-              <HeadlineBlock
-                subHeadline="NARROWING THE FOCUS"
-                headline="Defining Scope"
-                description="After analyzing our data and coming up with our insights, we realized that students came to not use the CMU shuttle because it failed to provide students with accessible information around how to best plan out routes around campus-related transit and conditions." />
-            </Col>
-          </Row>
-          <SubHeadline text="PROBLEM STATEMENT" />
-          <Row>
-            <Col md={10}>
-            <Standout
-              headline="Our research showed that ---"
-              content="Graduate students want to stay on schedule with their classes and activities but current apps fail to offer them the immediate and best responsive routes to and fro and around campus."
-              color="#DEEAFF" />
-            </Col>
-          </Row>
-        </Container>
-        <HangingBlock
-          backgroundColor="#D5DCE7"
-          headline="MIDPOINT"
-          body1="We can now focus on trying to reduce the gap around information accessibility for students in our design solutions, particularly ideas around what information students need and how to present it." />
-        <Container>
-          <Row>
-            <Col md={6}>
-              <HeadlineBlock
-                subHeadline="DRILLING DOWN THE CONCEPT"
-                headline="Ideation"
-                description="Taking our research insights into account, the team began brainstorming ideas we should approach to help us narrow in more about what information and how to show the information students needed." />
-            </Col>
-          </Row>
-          <Row>
-            <Col md={6}>
-              <ContentBlock
-                subHeadline="BRAINSTORMING"
-                headline="Digging deeper into why students commute the way they do through speed dating"
-                body1="With our research to guide us, we brainstormed a number of HWE (How Might We) statements coupled with corresponding storyboards. Each storyboards was drawn to elicit user feedback on edge scenarios for their corresponding use case."
-                body2="We presented each storyboard to users through a speed dating exercise where we asked them qualitative question how accurate each storyboard was to their own experiences. The top three that received positive feedback were:" />
-            </Col>
-          </Row>
-          <SubHeadline text="KEY FINDINGS" />
-          <CarouselComponent carouselType="image" content={this.carousel2Content} />
-          <SubHeadline text="DESIGN FOCUS" />
-          <Row>
-            <Col md={10}>
+              </Col>
+            </Row>
+          </Container>
+          <HangingBlock
+            backgroundColor="#DEEAFF"
+            headline="RESEARCH HIGHLIGHTS"
+            body1="Having talked to our users first-hand, the strongest pain points were in getting information around campus navigation, speed, and unpredictable transport conditions."
+            body2="Apps that currently crowdsource transit information are too cluttered and difficult to use to effectively navigate the campus." />
+        </div>
+        <div className="scroll-defining-scope">
+          <Container>
+            <Row>
+              <Col md={6}>
+                <HeadlineBlock
+                  subHeadline="NARROWING THE FOCUS"
+                  headline="Defining Scope"
+                  description="After analyzing our data and coming up with our insights, we realized that students came to not use the CMU shuttle because it failed to provide students with accessible information around how to best plan out routes around campus-related transit and conditions." />
+              </Col>
+            </Row>
+            <SubHeadline text="PROBLEM STATEMENT" />
+            <Row>
+              <Col md={10}>
               <Standout
-                color="#DEEAFF"
-                headline="From our ideation phase, we worked out a direction --"
-                content="An all-in-one transportation application that integrates all CMU related transit information and offered input features for real-time crowdsourced updates" />
-            </Col>
-          </Row>
-        </Container>
-        <HangingBlock
-          backgroundColor="#DEEAFF"
-          headline="DESIGN HIGHLIGHTS"
-          body1="Through ideating different use case scenarios, we were able to recognize an all-around design direction that resonated most with how users want to travel." />
-        <Container>
+                headline="Our research showed that ---"
+                content="Graduate students want to stay on schedule with their classes and activities but current apps fail to offer them the immediate and best responsive routes to and fro and around campus."
+                color="#DEEAFF" />
+              </Col>
+            </Row>
+          </Container>
+          <HangingBlock
+            backgroundColor="#D5DCE7"
+            headline="MIDPOINT"
+            body1="We can now focus on trying to reduce the gap around information accessibility for students in our design solutions, particularly ideas around what information students need and how to present it." />
+        </div>
+        <div className="scroll-ideation">
+          <Container>
+            <Row>
+              <Col md={6}>
+                <HeadlineBlock
+                  subHeadline="DRILLING DOWN THE CONCEPT"
+                  headline="Ideation"
+                  description="Taking our research insights into account, the team began brainstorming ideas we should approach to help us narrow in more about what information and how to show the information students needed." />
+              </Col>
+            </Row>
+            <Row>
+              <Col md={6}>
+                <ContentBlock
+                  subHeadline="BRAINSTORMING"
+                  headline="Digging deeper into why students commute the way they do through speed dating"
+                  body1="With our research to guide us, we brainstormed a number of HWE (How Might We) statements coupled with corresponding storyboards. Each storyboards was drawn to elicit user feedback on edge scenarios for their corresponding use case."
+                  body2="We presented each storyboard to users through a speed dating exercise where we asked them qualitative question how accurate each storyboard was to their own experiences. The top three that received positive feedback were:" />
+              </Col>
+            </Row>
+            <SubHeadline text="KEY FINDINGS" />
+            <CarouselComponent carouselType="image" content={this.carousel2Content} />
+            <SubHeadline text="DESIGN FOCUS" />
+            <Row>
+              <Col md={10}>
+                <Standout
+                  color="#DEEAFF"
+                  headline="From our ideation phase, we worked out a direction --"
+                  content="An all-in-one transportation application that integrates all CMU related transit information and offered input features for real-time crowdsourced updates" />
+              </Col>
+            </Row>
+          </Container>
+          <HangingBlock
+            backgroundColor="#DEEAFF"
+            headline="DESIGN HIGHLIGHTS"
+            body1="Through ideating different use case scenarios, we were able to recognize an all-around design direction that resonated most with how users want to travel." />
+        </div>
+        <Container className="scroll-iteration">
           <Row>
             <Col md={6}>
               <HeadlineBlock
@@ -447,12 +498,14 @@ class HermesProject extends Component {
           backgroundColor="#D5DCE7"
           fd1Subheadline="OUTCOME"
           fd1Headline="Final Design"
+          fd1HeadlineScrollId="scroll-final-design"
           fd1Body1="A holistic navigation experience catering the campus experience to students in real-time and in focus"
           fd1Url="https://invis.io/UYPGWACGHRF"
           fd1UrlDescription="Check out our prototype >"
           imageUrl={finalDesign}
           fd2Subheadline="POST-MORTEM"
           fd2Headline="Reflections on This Project"
+          fd2HeadlineScrollId="scroll-reflections"
           fd2Title1="It’s important to move ahead with out of the box ideas."
           fd2Body1="Crowdsourcing was originally an entire new approach for us to create travel alerts but it became a cornerstone technology to our final design."
           fd2Title2="Research is crucial to better design."

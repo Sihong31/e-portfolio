@@ -29,6 +29,7 @@ import HangingBlock from '../../components/hanging-block/hanging-block';
 import FinalDesign from '../../components/final-design/final-design';
 import SingleAccordion from '../../components/single-accordion/single-accordion';
 import CarouselComponent from '../../components/carousel/carousel-component';
+import ScrollSection from '../../components/scroll-section/scroll-section';
 
 
 class RobotProject extends Component {
@@ -94,9 +95,41 @@ class RobotProject extends Component {
     }
   ];
 
+  scrollSectionLinks = [
+    {
+      scrollToId: "scroll-project-overview",
+      linkName: "Project Overview"
+    },
+    {
+      scrollToId: "scroll-project-roadmap",
+      linkName: "Project Roadmap"
+    },
+    {
+      scrollToId: "scroll-study-design",
+      linkName: "Study Design"
+    },
+    {
+      scrollToId: "scroll-user-testing",
+      linkName: "User Testing"
+    },
+    {
+      scrollToId: "scroll-analysis",
+      linkName: "Analysis"
+    },
+    {
+      scrollToId: "scroll-next-steps",
+      linkName: "Next Steps"
+    },
+    {
+      scrollToId: "scroll-reflections",
+      linkName: "Reflections"
+    }
+  ];
+
   render() {
     return (
       <div className="robot-project">
+        <ScrollSection links={this.scrollSectionLinks}/>
         <ProjectHero 
           backgroundColor="#c4e7e9"
           date="SEPTEMBER - DECEMBER  2018"
@@ -104,7 +137,7 @@ class RobotProject extends Component {
           description="a study around the role of robots as educators in one-to-one tutoring spaces"
           projectType="robot"
           imageUrl={heroRobot} />
-        <Container>
+        <Container className="scroll-project-overview">
           <ProjectOverview
             body1="The landscape around quality education is changing more than ever today with the introduction of technologies such as robots to serve as learning companions."
             body2="We sought to find out if robots were able to serve as a reliable teacher proxy in a one-on-one setting for students who rely on steady and relevant feedback for their performances."
@@ -153,77 +186,83 @@ class RobotProject extends Component {
             body1="53% of participants used “cute” to describe Cozmo in a positive context, with high affinity scores."
             imageUrl={littleRobot} />
         </Container>
-        <ProjectRoadmap
-          backgroundColor="#c9dadb"
-          imageUrl={projectRoadmapImage}
-          leftBody1="We practiced a standard lab research format with getting the results of this study."
-          leftBody2="We setup two controlled user studies measuring two separate variables, affinity and trust, with a robot responding to user feedback."
-          rightBody1="Literature Review, Moderated User Studies, ANOVA Analysis" />
-        <Container>
-          <Row>
-            <Col md={6}>
-              <HeadlineBlock
-                headline="Study Design"
-                subHeadline="SETTING UP THE EXPERIMENT"
-                description="Our study required us to figure out a way to independently measure the human response to the robot and coordinate the experiment to generate the best results." />
-            </Col>
-          </Row>
-          <Row>
-            <Col md={6}>
-              <ContentBlock
-                headline="Building out our hypotheses through literature reviews"
-                subHeadline="OUR STUDIES"
-                body1="We learned from previous work done in the field that robots have been effective in delivering instructions to students and provide students the non-judgmental feedback that helps learning thrive."
-                body2="We were able to draw out five hypotheses after settling for a factorial study design with the robot and the human feedback as independent variables."
-                body3="Subjects in two of the studies would receive conflicting feedback from the robot and the computer while subjects in the two other studies would receive the same feedback from the robot and the computer." />
-            </Col>
-          </Row>
-          <SubHeadline text="STUDY MATRIX" />
-          <div style={{ marginBottom: '100px' }}>
-            <FullImage imageUrl={studyMatrix} altText="Study Matrix" />
-          </div>
-          <Row>
-            <Col>
-              <ListBlock headline="Hypotheses" items={this.listBlockContent2} />
-            </Col>
-          </Row>
-        </Container>
-        <HangingBlock
-          backgroundColor="#c4e7e9"
-          headline="HIGHLIGHTS"
-          body1="We ran a pilot test before proceeding with a final study run with this study design. Throughout the entire process, we iterated the study design many times to minimize cases of false positives."
-          body2="We moved ahead on tweaks to what exact robotic motions we’d display and the exact material shown on the computer." />
-        <Container>
-          <Row>
-            <Col md={6}>
-              <HeadlineBlock
-                subHeadline="TESTING IN PROGRESS"
-                headline="User Testing"
-                description="At this stage, we assembled 24 participants to gauge their feedback on the robot feedback within the constraints of our study design." />
-            </Col>
-          </Row>
-          <Row>
-            <Col md={6}>
-              <ContentBlock
-                subHeadline="THE PROCESS"
-                headline="Going through our study with moderated user studies"
-                body1="We walked each participant through a quick demo that included sample questions and a demo of the robot reactions to prevent people from being startled."
-                body2="Participants then filled out a demographic survey which asked their overall affinity to the robot. They then walked through a set of cognitive test questions. Once they finish, the computer screen will show a result and the robot will react simultaneously. A feedback survey follows with questions about their experience with the robot post-study." />
-            </Col>
-          </Row>
-          <SubHeadline text="STEP BY STEP" />
-          <div style={{ margin: '100px 0' }}>
-            <FullImage imageUrl={stepByStep} altText="Step By Step" /> 
-          </div>
-          <SubHeadline text="COMPUTER/ ROBOT FEEDBACK" />
-          <FullImage imageUrl={robotFeedback} altText="Robot Feedback" />
-        </Container>
-        <HangingBlock
-          backgroundColor="#c4e7e9"
-          headline="HIGHLIGHTS"
-          body1="We had a total of 44 participants in our final study, a recruitment process that lasted two weeks and was ahead of a Thanksgiving break."
-          body2="We bootstrapped a recruitment process of flyers and word-of-mouth throughout our program pool and the general CMU population to get past 30 participants to attempt for statistical significance." />
-        <Container>
+        <div className="scroll-project-roadmap">
+          <ProjectRoadmap
+            backgroundColor="#c9dadb"
+            imageUrl={projectRoadmapImage}
+            leftBody1="We practiced a standard lab research format with getting the results of this study."
+            leftBody2="We setup two controlled user studies measuring two separate variables, affinity and trust, with a robot responding to user feedback."
+            rightBody1="Literature Review, Moderated User Studies, ANOVA Analysis" />
+        </div>
+        <div className="scroll-study-design">
+          <Container>
+            <Row>
+              <Col md={6}>
+                <HeadlineBlock
+                  headline="Study Design"
+                  subHeadline="SETTING UP THE EXPERIMENT"
+                  description="Our study required us to figure out a way to independently measure the human response to the robot and coordinate the experiment to generate the best results." />
+              </Col>
+            </Row>
+            <Row>
+              <Col md={6}>
+                <ContentBlock
+                  headline="Building out our hypotheses through literature reviews"
+                  subHeadline="OUR STUDIES"
+                  body1="We learned from previous work done in the field that robots have been effective in delivering instructions to students and provide students the non-judgmental feedback that helps learning thrive."
+                  body2="We were able to draw out five hypotheses after settling for a factorial study design with the robot and the human feedback as independent variables."
+                  body3="Subjects in two of the studies would receive conflicting feedback from the robot and the computer while subjects in the two other studies would receive the same feedback from the robot and the computer." />
+              </Col>
+            </Row>
+            <SubHeadline text="STUDY MATRIX" />
+            <div style={{ marginBottom: '100px' }}>
+              <FullImage imageUrl={studyMatrix} altText="Study Matrix" />
+            </div>
+            <Row>
+              <Col>
+                <ListBlock headline="Hypotheses" items={this.listBlockContent2} />
+              </Col>
+            </Row>
+          </Container>
+          <HangingBlock
+            backgroundColor="#c4e7e9"
+            headline="HIGHLIGHTS"
+            body1="We ran a pilot test before proceeding with a final study run with this study design. Throughout the entire process, we iterated the study design many times to minimize cases of false positives."
+            body2="We moved ahead on tweaks to what exact robotic motions we’d display and the exact material shown on the computer." />
+        </div>
+        <div className="scroll-user-testing">
+          <Container>
+            <Row>
+              <Col md={6}>
+                <HeadlineBlock
+                  subHeadline="TESTING IN PROGRESS"
+                  headline="User Testing"
+                  description="At this stage, we assembled 24 participants to gauge their feedback on the robot feedback within the constraints of our study design." />
+              </Col>
+            </Row>
+            <Row>
+              <Col md={6}>
+                <ContentBlock
+                  subHeadline="THE PROCESS"
+                  headline="Going through our study with moderated user studies"
+                  body1="We walked each participant through a quick demo that included sample questions and a demo of the robot reactions to prevent people from being startled."
+                  body2="Participants then filled out a demographic survey which asked their overall affinity to the robot. They then walked through a set of cognitive test questions. Once they finish, the computer screen will show a result and the robot will react simultaneously. A feedback survey follows with questions about their experience with the robot post-study." />
+              </Col>
+            </Row>
+            <SubHeadline text="STEP BY STEP" />
+            <div style={{ margin: '100px 0' }}>
+              <FullImage imageUrl={stepByStep} altText="Step By Step" /> 
+            </div>
+            <SubHeadline text="COMPUTER/ ROBOT FEEDBACK" />
+            <FullImage imageUrl={robotFeedback} altText="Robot Feedback" />
+          </Container>
+          <HangingBlock
+            backgroundColor="#c4e7e9"
+            headline="HIGHLIGHTS"
+            body1="We had a total of 44 participants in our final study, a recruitment process that lasted two weeks and was ahead of a Thanksgiving break."
+            body2="We bootstrapped a recruitment process of flyers and word-of-mouth throughout our program pool and the general CMU population to get past 30 participants to attempt for statistical significance." />
+        </div>
+        <Container className="scroll-analysis">
           <Row>
             <Col md={6}>
               <HeadlineBlock
@@ -282,12 +321,14 @@ class RobotProject extends Component {
           backgroundColor="#c9dadb"
           fd1Subheadline="FUTURE WORK"
           fd1Headline="Next Steps"
+          fd1HeadlineScrollId="scroll-next-steps"
           fd1Body1="While we touched upon some important things that greatly define what human-robot interaction can be in education, we can take further steps to clarify the exact significance of affinity and trust for human learners towards robots with a greater pools of participants."
           fd1Body2="If our hypotheses prove to be correct, it would be a prime opportunity for us to see how well robot-student interaction could go in real-time."
           fd1Url="https://drive.google.com/file/d/1j9GPcsWH1sWjJuSKGlzpzWna4hPdODgn/view?usp=sharing"
           fd1UrlDescription="Read the full paper here >"
           fd2Subheadline="POST-MORTEM"
           fd2Headline="Reflections on This Project"
+          fd2HeadlineScrollId="scroll-reflections"
           fd2Title1="Coming up with a plan begets great work."
           fd2Body1="We were able to accomplish an oustanding stack of readings, tallying recruitment, programming robots, and performing analysis due to prior buffering and timecasting of each step and our commitment to work within the timeline."
           fd2Title2="Constraints are there to challenge, not defeat."
