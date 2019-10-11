@@ -48,11 +48,11 @@ class Home extends Component {
             <ProjectCard 
               title="Tradewell Playbook" 
               description="a set of alerting guidelines aimed to create leader advantages in the dark pool trading space" 
-              link="/tradewell" 
+              link="https://wangqianeve.github.io/CapstoneWebsite/index.html" 
               linkText="Coming soon"
+              tradewell={true}
               backgroundColor="#DFE3FE"
               imageUrl={thumbnailTradewell}
-              tradewell={true}
               caption="UX Research  | UI Design | FinTech | Desktop" />
           </Col>
         </Row>

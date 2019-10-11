@@ -15,6 +15,7 @@ class TradewellProject extends Component {
           <Row>
             <Col style={{ textAlign: 'center' }}>
               <h1 style={{ marginTop: '100px' }}>COMING SOON...</h1>
+              <a href="https://wangqianeve.github.io/CapstoneWebsite/index.html" target="_blank" style={{ textDecoration: 'underline' }}>Click here for project details</a>
             </Col>
           </Row>
         </Container>
