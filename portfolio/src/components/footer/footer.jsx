@@ -37,12 +37,12 @@ class Footer extends Component {
                   Drop me a line at <a href="mailto:emily.f.gong@gmail.com"><strong>emily.f.gong@gmail.com</strong></a> to
                   chat or work on something cool together!
                 </h2>
-              </div>
+              </div>   
             </Col>
           </Row>
           <Row>
             <Col>
-              <p className="footer-copyright">Designed with <span><img src={iconBalloon} alt="balloon" /></span> by Emily Gong 2019</p>
+              <p className="footer-copyright">Designed with <span><img src={iconBalloon} alt="balloon" /></span> by Emily Gong {new Date().getFullYear()}</p>
             </Col>
           </Row>
         </Container>
